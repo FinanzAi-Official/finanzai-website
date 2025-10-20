@@ -14,7 +14,7 @@
     <meta property="og:description" content="Trade War + USD forte: risk-off in Europa, oro sostenuto. Azione sul primo break USA.">
     <meta property="og:type" content="article">
     
-    <link rel="stylesheet" href="miosito.css">
+    <link rel="stylesheet" href="finanzai-style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,41 +25,48 @@
     
     <a id="button-top" class="scroll-top" href="#top" aria-label="Torna su"></a>
     
-   <header id="header-principale" class="sticky-header">
-    <div class="container-header">
-        <div id="logo">
-            <a href="miosito2.html" aria-label="FinanzAI Homepage">
-                <h1>FinanzAI.it</h1>
-                <p><em>Economia, Finanza e Trading</em></p>
-            </a>
-        </div>
-        
-        <nav role="navigation" aria-label="Menu principale">
-            <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+    <!-- Overlay scuro per menu mobile -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    
+    <header id="header-principale" class="sticky-header">
+        <div class="container-header">
+            <!-- Hamburger menu (sinistra) -->
+            <button class="mobile-menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
                 <span class="hamburger-icon"></span>
             </button>
             
-            <ul class="menu-principale" id="mainMenu">
-                <li><a href="miosito2.html" class="menu-link">Home</a></li>
-                <li><a href="#investimenti" class="menu-link">Investimenti</a></li>
-                <li><a href="#mercati" class="menu-link">Mercati</a></li>
-                <li class="menu-dropdown">
-                    <a href="#guide" class="menu-link">
-                        Guide <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="#trading">Trading</a></li>
-                        <li><a href="#crypto">Criptovalute</a></li>
-                        <li><a href="#etf">ETF</a></li>
-                        <li><a href="#azioni">Azioni</a></li>
-                    </ul>
-                </li>
-                <li><a href="#economia" class="menu-link">Economia</a></li>
-                <li><a href="#tools" class="menu-link">Strumenti</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+            <!-- Logo (centro su mobile) -->
+            <div id="logo">
+                <a href="miosito2.html" aria-label="FinanzAI Homepage">
+                    <h1>FinanzAI.it</h1>
+                    <p><em>Economia, Finanza e Trading</em></p>
+                </a>
+            </div>
+            
+            <!-- Navigazione -->
+            <nav role="navigation" aria-label="Menu principale">
+                <ul class="menu-principale" id="mainMenu">
+                    <li><a href="miosito2.html" class="menu-link">Home</a></li>
+                    <li><a href="#investimenti" class="menu-link">Investimenti</a></li>
+                    <li><a href="#mercati" class="menu-link">Mercati</a></li>
+                    <li class="menu-dropdown">
+                        <a href="#guide" class="menu-link" onclick="toggleSubmenu(event)">
+                            Guide <span class="arrow-down">▼</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#trading">Trading</a></li>
+                            <li><a href="#crypto">Criptovalute</a></li>
+                            <li><a href="#etf">ETF</a></li>
+                            <li><a href="#azioni">Azioni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#economia" class="menu-link">Economia</a></li>
+                    <li><a href="#tools" class="menu-link">Strumenti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="hero-blog" id="top">
         <picture>
             <source media="(min-width: 1024px)" srcset="https://picsum.photos/1920/400?random=100" type="image/jpeg">
@@ -68,7 +75,7 @@
         </picture>
         <div class="hero-overlay">
             <div class="hero-content">
-                <p class="hero-title">Morning Briefing ATS — 15 Ottobre 2025 (10:22 CET)</p>
+                <p class="hero-title">Morning Briefing ATS – 15 Ottobre 2025 (10:22 CET)</p>
                 <p class="hero-author">Analisi Tecnica Professionale</p>
             </div>
         </div>
@@ -91,7 +98,7 @@
                     
                     <header class="article-header">
                         <h2 class="titolo-articolo" itemprop="headline">
-                            Morning Briefing ATS — 15 Ottobre 2025 (10:22 CET)
+                            Morning Briefing ATS – 15 Ottobre 2025 (10:22 CET)
                         </h2>
                         
                         <div class="article-meta">
@@ -178,15 +185,15 @@
                             <h3>Intermarket & Correlazioni</h3>
                             
                             <ul class="lista-strategie">
-                                <li><strong>USD↑ ↔ Indici↓:</strong> pressione sui titoli growth e export</li>
-                                <li><strong>Gold↑ ↔ USD↓,</strong> ma oggi coesistono fasi in cui salgono entrambi per effetto risk shock</li>
+                                <li><strong>USD↑ → Indici↓:</strong> pressione sui titoli growth e export</li>
+                                <li><strong>Gold↑ ↔ USD↑,</strong> ma oggi coesistono fasi in cui salgono entrambi per effetto risk shock</li>
                                 <li><strong>WTI</strong> correlato al ciclo risk-on/off e alla domanda percepita</li>
                                 <li><strong>BTC</strong> si comporta come un risk asset: deflussi nelle fasi di avversione al rischio</li>
                             </ul>
 
                             <div class="box-warning alert-box">
                                 <h3 class="box-title">
-                                    <span class="attenzione">❌ Invalidazioni</span>
+                                    <span class="attenzione">⚠ Invalidazioni</span>
                                 </h3>
                                 <p>Riassorbimento completo dei minimi notturni sugli indici (H1) + USD in indebolimento → ritorno a bias neutrale.</p>
                             </div>
@@ -395,7 +402,7 @@
                             
                             <div class="prospettive-future summary-box">
                                 <h4>Situazione a metà giornata europea</h4>
-                                <p>A metà giornata europea — intorno alle <strong>12:19 CET</strong> — i mercati si trovano in piena fase di consolidamento tecnico.</p>
+                                <p>A metà giornata europea – intorno alle <strong>12:19 CET</strong> – i mercati si trovano in piena fase di consolidamento tecnico.</p>
                                 <p>È la fascia oraria in cui i breakout mattutini vengono testati e i trader istituzionali iniziano a prepararsi all'azione del <strong>"primo break USA"</strong>.</p>
                                 <p>L'assenza di market mover UE e il bias risk-off (Trade War + USD forte) mantengono i flussi prudenti fino all'apertura americana.</p>
                             </div>
@@ -452,126 +459,126 @@
                     </footer>
                 </article>
 
-               <section class="comments-section" aria-label="Commenti">
-    <h2>Commenti <span class="comment-count">3</span></h2>
-    
-    <!-- Form per nuovo commento -->
-    <div class="comment-form">
-        <h3>Lascia un commento</h3>
-        <form id="commentForm" action="#" method="post">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="comment-name">Nome *</label>
-                    <input type="text" id="comment-name" name="name" required placeholder="Il tuo nome">
-                </div>
-                <div class="form-group">
-                    <label for="comment-email">Email *</label>
-                    <input type="email" id="comment-email" name="email" required placeholder="La tua email (non verrà pubblicata)">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="comment-text">Commento *</label>
-                <textarea id="comment-text" name="comment" required placeholder="Condividi la tua esperienza o fai una domanda..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit-comment">Pubblica Commento</button>
-        </form>
-        <p style="font-size: 13px; color: var(--text-muted); margin-top: var(--spacing-md);">
-            <em>I commenti sono moderati. Sii rispettoso e costruttivo.</em>
-        </p>
-    </div>
-
-    <!-- Lista commenti esistenti -->
-    <ul class="comments-list">
-        <!-- Commento 1 -->
-        <li class="comment-item">
-            <div class="comment-header">
-                <div class="comment-avatar">
-                    <img src="https://picsum.photos/50/50?random=301" alt="Avatar Luca">
-                </div>
-                <div class="comment-meta">
-                    <div class="comment-author">Luca Mercati</div>
-                    <div class="comment-date">14 ottobre 2025 - 18:35</div>
-                </div>
-            </div>
-            <div class="comment-body">
-                <p>Ottima analisi! I livelli su EUR/USD sembrano molto solidi. Ho notato anch'io la divergenza tra USD forte e indici deboli. Pensi che il breakout USA possa arrivare già oggi pomeriggio?</p>
-            </div>
-            <div class="comment-actions">
-                <button class="comment-reply">Rispondi</button>
-                <button class="comment-like">
-                    👍 <span class="like-count">5</span>
-                </button>
-            </div>
-        </li>
-
-        <!-- Commento 2 con risposta -->
-        <li class="comment-item">
-            <div class="comment-header">
-                <div class="comment-avatar">
-                    <img src="https://picsum.photos/50/50?random=302" alt="Avatar Sara">
-                </div>
-                <div class="comment-meta">
-                    <div class="comment-author">Sara Investimenti</div>
-                    <div class="comment-date">14 ottobre 2025 - 20:12</div>
-                </div>
-            </div>
-            <div class="comment-body">
-                <p>Setup molto chiari e professionali. Una domanda: il Plan B sul fake break EUR/USD è sempre attivo o solo in determinate condizioni di volume?</p>
-            </div>
-            <div class="comment-actions">
-                <button class="comment-reply">Rispondi</button>
-                <button class="comment-like">
-                    👍 <span class="like-count">3</span>
-                </button>
-            </div>
-
-            <!-- Risposta al commento -->
-            <ul class="comment-replies">
-                <li class="comment-item">
-                    <div class="comment-header">
-                        <div class="comment-avatar">
-                            <img src="https://picsum.photos/50/50?random=104" alt="Avatar Desk ATS">
-                        </div>
-                        <div class="comment-meta">
-                            <div class="comment-author">Desk ATS Trading</div>
-                            <div class="comment-date">15 ottobre 2025 - 08:45</div>
-                        </div>
+                <section class="comments-section" aria-label="Commenti">
+                    <h2>Commenti <span class="comment-count">3</span></h2>
+                    
+                    <!-- Form per nuovo commento -->
+                    <div class="comment-form">
+                        <h3>Lascia un commento</h3>
+                        <form id="commentForm" action="#" method="post">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="comment-name">Nome *</label>
+                                    <input type="text" id="comment-name" name="name" required placeholder="Il tuo nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment-email">Email *</label>
+                                    <input type="email" id="comment-email" name="email" required placeholder="La tua email (non verrà pubblicata)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-text">Commento *</label>
+                                <textarea id="comment-text" name="comment" required placeholder="Condividi la tua esperienza o fai una domanda..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit-comment">Pubblica Commento</button>
+                        </form>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-top: var(--spacing-md);">
+                            <em>I commenti sono moderati. Sii rispettoso e costruttivo.</em>
+                        </p>
                     </div>
-                    <div class="comment-body">
-                        <p>Buona domanda Sara! Il Plan B si attiva solo se vediamo una chiusura M15 sopra il livello con volume inferiore alla media degli ultimi 20 periodi. In quel caso è probabile un fake-break e il rientro diventa interessante.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <button class="comment-like">
-                            👍 <span class="like-count">2</span>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </li>
 
-        <!-- Commento 3 -->
-        <li class="comment-item">
-            <div class="comment-header">
-                <div class="comment-avatar">
-                    <img src="https://picsum.photos/50/50?random=303" alt="Avatar Marco">
-                </div>
-                <div class="comment-meta">
-                    <div class="comment-author">Marco Trader Pro</div>
-                    <div class="comment-date">15 ottobre 2025 - 09:20</div>
-                </div>
-            </div>
-            <div class="comment-body">
-                <p>Grazie per il briefing mattutino. I livelli su Bitcoin sono particolarmente interessanti oggi. Attenzione però alla correlazione con Nasdaq che potrebbe portare volatilità inaspettata.</p>
-            </div>
-            <div class="comment-actions">
-                <button class="comment-reply">Rispondi</button>
-                <button class="comment-like">
-                    👍 <span class="like-count">7</span>
-                </button>
-            </div>
-        </li>
-    </ul>
-</section>
+                    <!-- Lista commenti esistenti -->
+                    <ul class="comments-list">
+                        <!-- Commento 1 -->
+                        <li class="comment-item">
+                            <div class="comment-header">
+                                <div class="comment-avatar">
+                                    <img src="https://picsum.photos/50/50?random=301" alt="Avatar Luca">
+                                </div>
+                                <div class="comment-meta">
+                                    <div class="comment-author">Luca Mercati</div>
+                                    <div class="comment-date">14 ottobre 2025 - 18:35</div>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>Ottima analisi! I livelli su EUR/USD sembrano molto solidi. Ho notato anch'io la divergenza tra USD forte e indici deboli. Pensi che il breakout USA possa arrivare già oggi pomeriggio?</p>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="comment-reply">Rispondi</button>
+                                <button class="comment-like">
+                                    👍 <span class="like-count">5</span>
+                                </button>
+                            </div>
+                        </li>
+
+                        <!-- Commento 2 con risposta -->
+                        <li class="comment-item">
+                            <div class="comment-header">
+                                <div class="comment-avatar">
+                                    <img src="https://picsum.photos/50/50?random=302" alt="Avatar Sara">
+                                </div>
+                                <div class="comment-meta">
+                                    <div class="comment-author">Sara Investimenti</div>
+                                    <div class="comment-date">14 ottobre 2025 - 20:12</div>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>Setup molto chiari e professionali. Una domanda: il Plan B sul fake break EUR/USD è sempre attivo o solo in determinate condizioni di volume?</p>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="comment-reply">Rispondi</button>
+                                <button class="comment-like">
+                                    👍 <span class="like-count">3</span>
+                                </button>
+                            </div>
+
+                            <!-- Risposta al commento -->
+                            <ul class="comment-replies">
+                                <li class="comment-item">
+                                    <div class="comment-header">
+                                        <div class="comment-avatar">
+                                            <img src="https://picsum.photos/50/50?random=104" alt="Avatar Desk ATS">
+                                        </div>
+                                        <div class="comment-meta">
+                                            <div class="comment-author">Desk ATS Trading</div>
+                                            <div class="comment-date">15 ottobre 2025 - 08:45</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-body">
+                                        <p>Buona domanda Sara! Il Plan B si attiva solo se vediamo una chiusura M15 sopra il livello con volume inferiore alla media degli ultimi 20 periodi. In quel caso è probabile un fake-break e il rientro diventa interessante.</p>
+                                    </div>
+                                    <div class="comment-actions">
+                                        <button class="comment-like">
+                                            👍 <span class="like-count">2</span>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Commento 3 -->
+                        <li class="comment-item">
+                            <div class="comment-header">
+                                <div class="comment-avatar">
+                                    <img src="https://picsum.photos/50/50?random=303" alt="Avatar Marco">
+                                </div>
+                                <div class="comment-meta">
+                                    <div class="comment-author">Marco Trader Pro</div>
+                                    <div class="comment-date">15 ottobre 2025 - 09:20</div>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>Grazie per il briefing mattutino. I livelli su Bitcoin sono particolarmente interessanti oggi. Attenzione però alla correlazione con Nasdaq che potrebbe portare volatilità inaspettata.</p>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="comment-reply">Rispondi</button>
+                                <button class="comment-like">
+                                    👍 <span class="like-count">7</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </div>
 
             <aside class="sidebar-column" role="complementary">
@@ -706,27 +713,97 @@
         </div>
     </footer>
 
+    <!-- ========== JAVASCRIPT COMPLETO ========== -->
     <script>
-        // Mobile menu toggle
+        // ===== MENU MOBILE SIDEBAR - FUNZIONANTE AL 100% =====
         function toggleMenu() {
             const menu = document.getElementById('mainMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
+            const toggle = document.getElementById('menuToggle');
+            const overlay = document.getElementById('menuOverlay');
+            const body = document.body;
+            
+            // Debug - verifica elementi
+            if (!menu || !toggle || !overlay) {
+                console.error('❌ Elementi menu non trovati!');
+                console.log('Menu:', menu);
+                console.log('Toggle:', toggle);
+                console.log('Overlay:', overlay);
+                return;
+            }
+            
+            // Toggle delle classi
             menu.classList.toggle('active');
-            const isExpanded = menu.classList.contains('active');
-            toggle.setAttribute('aria-expanded', isExpanded);
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            const isActive = menu.classList.contains('active');
+            toggle.setAttribute('aria-expanded', isActive);
+            
+            // Blocca/sblocca scroll
+            body.style.overflow = isActive ? 'hidden' : '';
+            
+            console.log('🔄 Menu toggled:', isActive ? 'APERTO ✅' : 'CHIUSO ❌');
         }
 
-        // Scroll to top button
-        window.addEventListener('scroll', function() {
-            const scrollBtn = document.getElementById('button-top');
-            if (window.pageYOffset > 300) {
-                scrollBtn.classList.add('visible');
-            } else {
-                scrollBtn.classList.remove('visible');
+        // Toggle submenu mobile
+        function toggleSubmenu(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const menuItem = event.target.closest('.menu-dropdown');
+                if (menuItem) {
+                    menuItem.classList.toggle('active');
+                    console.log('📂 Submenu toggled');
+                }
+            }
+        }
+
+        // Click overlay per chiudere
+        document.getElementById('menuOverlay')?.addEventListener('click', toggleMenu);
+
+        // Chiudi con ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mainMenu');
+                if (menu && menu.classList.contains('active')) {
+                    console.log('⌨️ Menu chiuso con ESC');
+                    toggleMenu();
+                }
             }
         });
 
-        // Smooth scroll per anchor links
+        // Chiudi dopo click link (solo mobile)
+        document.querySelectorAll('.menu-principale a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    const menu = document.getElementById('mainMenu');
+                    if (menu && menu.classList.contains('active')) {
+                        setTimeout(toggleMenu, 200);
+                    }
+                }
+            });
+        });
+
+        // Test al caricamento
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM caricato - FinanzAI.it Ready!');
+            console.log('📱 Menu element:', document.getElementById('mainMenu') ? '✓' : '✗');
+            console.log('🍔 Toggle element:', document.getElementById('menuToggle') ? '✓' : '✗');
+            console.log('🌑 Overlay element:', document.getElementById('menuOverlay') ? '✓' : '✗');
+        });
+
+        // ===== SCROLL TO TOP =====
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('button-top');
+            if (scrollBtn) {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            }
+        });
+
+        // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -746,113 +823,57 @@
                 }
             });
         });
-    </script>
 
-    <script>
-    // Mobile menu toggle
-    function toggleMenu() {
-        const menu = document.getElementById('mainMenu');
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        menu.classList.toggle('active');
-        const isExpanded = menu.classList.contains('active');
-        toggle.setAttribute('aria-expanded', isExpanded);
-    }
-
-    // Scroll to top button
-    window.addEventListener('scroll', function() {
-        const scrollBtn = document.getElementById('button-top');
-        if (window.pageYOffset > 300) {
-            scrollBtn.classList.add('visible');
-        } else {
-            scrollBtn.classList.remove('visible');
-        }
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href !== '#top') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const headerOffset = 120;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-</script>
-
-
-<script>
-// Gestione form commenti
-document.getElementById('commentForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Raccolta dati
-    const name = document.getElementById('comment-name').value;
-    const email = document.getElementById('comment-email').value;
-    const comment = document.getElementById('comment-text').value;
-    
-    // Validazione base
-    if (!name || !email || !comment) {
-        alert('Compila tutti i campi obbligatori');
-        return;
-    }
-    
-    // Messaggio di conferma (in produzione qui invieresti i dati al server)
-    alert('Grazie per il tuo commento, ' + name + '!\n\nIl commento è in moderazione e verrà pubblicato a breve.');
-    
-    // Reset form
-    this.reset();
-    
-    // Scroll verso l'alto dei commenti
-    document.querySelector('.comments-section').scrollIntoView({ behavior: 'smooth' });
-});
-
-// Gestione pulsanti Reply
-document.querySelectorAll('.comment-reply').forEach(button => {
-    button.addEventListener('click', function() {
-        const commentAuthor = this.closest('.comment-item').querySelector('.comment-author').textContent;
-        const textarea = document.getElementById('comment-text');
-        textarea.value = '@' + commentAuthor + ' ';
-        textarea.focus();
-        
-        // Scroll al form
-        document.querySelector('.comment-form').scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-// Gestione pulsanti Like
-document.querySelectorAll('.comment-like').forEach(button => {
-    button.addEventListener('click', function() {
-        const likeCount = this.querySelector('.like-count');
-        let currentLikes = parseInt(likeCount.textContent);
-        
-        // Toggle like
-        if (this.classList.contains('liked')) {
-            this.classList.remove('liked');
-            likeCount.textContent = currentLikes - 1;
-        } else {
-            this.classList.add('liked');
-            likeCount.textContent = currentLikes + 1;
+        // ===== GESTIONE COMMENTI =====
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Animazione
-            this.style.transform = 'scale(1.2)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
-        }
-    });
-});
-</script>
+            const name = document.getElementById('comment-name').value;
+            const email = document.getElementById('comment-email').value;
+            const comment = document.getElementById('comment-text').value;
+            
+            if (!name || !email || !comment) {
+                alert('Compila tutti i campi obbligatori');
+                return;
+            }
+            
+            alert('Grazie per il tuo commento, ' + name + '!\n\nIl commento è in moderazione e verrà pubblicato a breve.');
+            
+            this.reset();
+            document.querySelector('.comments-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Gestione pulsanti Reply
+        document.querySelectorAll('.comment-reply').forEach(button => {
+            button.addEventListener('click', function() {
+                const commentAuthor = this.closest('.comment-item').querySelector('.comment-author').textContent;
+                const textarea = document.getElementById('comment-text');
+                textarea.value = '@' + commentAuthor + ' ';
+                textarea.focus();
+                document.querySelector('.comment-form').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Gestione pulsanti Like
+        document.querySelectorAll('.comment-like').forEach(button => {
+            button.addEventListener('click', function() {
+                const likeCount = this.querySelector('.like-count');
+                let currentLikes = parseInt(likeCount.textContent);
+                
+                if (this.classList.contains('liked')) {
+                    this.classList.remove('liked');
+                    likeCount.textContent = currentLikes - 1;
+                } else {
+                    this.classList.add('liked');
+                    likeCount.textContent = currentLikes + 1;
+                    this.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
