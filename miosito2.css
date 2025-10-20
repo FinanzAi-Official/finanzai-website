@@ -259,13 +259,15 @@ nav ul.menu-principale li a:hover,
     color: #c41e3a;
 }
 
-/* Mobile menu toggle */
+/* ========== MOBILE MENU TOGGLE ========== */
 .mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
     padding: 8px;
+    z-index: 1002;
+    position: relative;
 }
 
 .hamburger-icon {
@@ -274,6 +276,7 @@ nav ul.menu-principale li a:hover,
     height: 3px;
     background: #c41e3a;
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .hamburger-icon::before,
@@ -284,6 +287,8 @@ nav ul.menu-principale li a:hover,
     height: 3px;
     background: #c41e3a;
     position: absolute;
+    transition: all 0.3s ease;
+    left: 0;
 }
 
 .hamburger-icon::before {
@@ -293,6 +298,39 @@ nav ul.menu-principale li a:hover,
 .hamburger-icon::after {
     top: 8px;
 }
+
+/* Animazione X quando attivo */
+.mobile-menu-toggle.active .hamburger-icon {
+    background: transparent;
+}
+
+.mobile-menu-toggle.active .hamburger-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Overlay scuro */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 /* ========== HERO HOMEPAGE ========== */
@@ -1047,29 +1085,67 @@ nav ul.menu-principale li a:hover,
     transform: translateY(-5px);
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE - STILE MONEY.IT ========== */
 @media (max-width: 768px) {
+    #header-principale {
+        padding: 12px 16px;
+    }
+    
     .container-header {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        order: 1;
+        margin-right: auto;
     }
     
     #logo {
         text-align: center;
+        order: 2;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
-    nav {
-        width: 100%;
+    #logo h1 {
+        font-size: 28px;
+        margin-bottom: 0;
     }
     
-    .menu-principale {
-        flex-direction: column;
-        gap: 0;
+    #logo p {
         display: none;
     }
     
+    nav {
+        width: auto;
+        order: 3;
+    }
+    
+    /* Menu sidebar mobile - slide da sinistra */
+    .menu-principale {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100vh;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        padding: 80px 0 20px 0;
+        box-shadow: 4px 0 16px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        margin: 0;
+    }
+    
     .menu-principale.active {
-        display: flex;
+        left: 0;
     }
     
     .menu-principale li {
@@ -1077,25 +1153,39 @@ nav ul.menu-principale li a:hover,
         border-bottom: 1px solid var(--gray-200);
     }
     
+    .menu-principale li a,
     .menu-link {
-        text-align: center;
+        text-align: left;
         border-radius: 0;
-    }
-    
-    .mobile-menu-toggle {
-        display: block;
-        align-self: center;
+        padding: 16px 24px;
+        font-size: 16px;
     }
     
     .submenu {
         position: static;
         box-shadow: none;
         background: var(--gray-50);
-        display: none;
+        border-top: none;
+        border-radius: 0;
+        padding: 0;
+        min-width: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        display: block;
+    }
+    
+    .submenu a {
+        padding: 12px 24px 12px 48px;
+        font-size: 14px;
     }
     
     .menu-dropdown.active .submenu {
-        display: block;
+        max-height: 500px;
+    }
+    
+    .arrow-down {
+        right: 24px;
     }
     
     .article-horizontal {
@@ -1106,6 +1196,10 @@ nav ul.menu-principale li a:hover,
         flex: 1;
         width: 100%;
         height: 200px;
+    }
+    
+    .article-horizontal .article-content {
+        padding: 16px;
     }
     
     .hero-homepage {
@@ -1120,6 +1214,19 @@ nav ul.menu-principale li a:hover,
         grid-template-columns: 1fr;
     }
     
+    .layout-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .sidebar-column {
+        order: 2;
+    }
+    
+    .main-column {
+        order: 1;
+    }
+    
     .footer-links ul {
         flex-direction: column;
         text-align: center;
@@ -1129,19 +1236,27 @@ nav ul.menu-principale li a:hover,
     .footer-links .separator {
         display: none;
     }
+    
+    .container-main {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 480px) {
     #logo h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .section-title {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .article-title {
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .article-featured .article-title {
@@ -1150,6 +1265,14 @@ nav ul.menu-principale li a:hover,
     
     .article-horizontal .article-title {
         font-size: 16px;
+    }
+    
+    .article-featured .article-image {
+        height: 250px;
+    }
+    
+    .article-medium .article-image {
+        height: 200px;
     }
     
     .widget {
@@ -1161,6 +1284,18 @@ nav ul.menu-principale li a:hover,
         height: 45px;
         bottom: var(--spacing-lg);
         right: var(--spacing-lg);
+    }
+    
+    .hero-homepage {
+        max-height: 200px;
+    }
+    
+    .hero-title {
+        font-size: 20px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
     }
 }
 
@@ -1200,7 +1335,8 @@ nav ul.menu-principale li a:hover,
     footer,
     .scroll-top,
     .mobile-menu-toggle,
-    .hero-homepage {
+    .hero-homepage,
+    .menu-overlay {
         display: none !important;
     }
     
