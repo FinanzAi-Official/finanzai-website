@@ -25,8 +25,17 @@
     
     <a id="button-top" class="scroll-top" href="#top" aria-label="Torna su"></a>
     
+    <!-- Overlay scuro per menu mobile -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    
     <header id="header-principale" class="sticky-header">
         <div class="container-header">
+            <!-- Hamburger menu (sinistra) -->
+            <button class="mobile-menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger-icon"></span>
+            </button>
+            
+            <!-- Logo (centro su mobile) -->
             <div id="logo">
                 <a href="miosito2.html" aria-label="FinanzAI Homepage">
                     <h1>FinanzAI.it</h1>
@@ -34,28 +43,25 @@
                 </a>
             </div>
             
+            <!-- Navigazione -->
             <nav role="navigation" aria-label="Menu principale">
-                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
-                    <span class="hamburger-icon"></span>
-                </button>
-                
                 <ul class="menu-principale" id="mainMenu">
-                    <li><a href="#" class="menu-link">Home</a></li>
-                    <li><a href="#investimenti" class="menu-link">Investimenti</a></li>
-                    <li><a href="#mercati" class="menu-link">Mercati</a></li>
+                    <li><a href="#" class="menu-link" onclick="closeMenuOnClick(event)">Home</a></li>
+                    <li><a href="#investimenti" class="menu-link" onclick="closeMenuOnClick(event)">Investimenti</a></li>
+                    <li><a href="#mercati" class="menu-link" onclick="closeMenuOnClick(event)">Mercati</a></li>
                     <li class="menu-dropdown">
-                        <a href="#guide" class="menu-link">
+                        <a href="#guide" class="menu-link" onclick="toggleSubmenu(event)">
                             Guide <span class="arrow-down">▼</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#trading">Trading</a></li>
-                            <li><a href="#crypto">Criptovalute</a></li>
-                            <li><a href="#etf">ETF</a></li>
-                            <li><a href="#azioni">Azioni</a></li>
+                            <li><a href="#trading" onclick="closeMenuOnClick(event)">Trading</a></li>
+                            <li><a href="#crypto" onclick="closeMenuOnClick(event)">Criptovalute</a></li>
+                            <li><a href="#etf" onclick="closeMenuOnClick(event)">ETF</a></li>
+                            <li><a href="#azioni" onclick="closeMenuOnClick(event)">Azioni</a></li>
                         </ul>
                     </li>
-                    <li><a href="#economia" class="menu-link">Economia</a></li>
-                    <li><a href="#tools" class="menu-link">Strumenti</a></li>
+                    <li><a href="#economia" class="menu-link" onclick="closeMenuOnClick(event)">Economia</a></li>
+                    <li><a href="#tools" class="menu-link" onclick="closeMenuOnClick(event)">Strumenti</a></li>
                 </ul>
             </nav>
         </div>
@@ -528,36 +534,110 @@
         </div>
     </footer>
 
-    <!-- SCRIPT BASE -->
+    <!-- ========== JAVASCRIPT ========== -->
     <script>
-        // Mobile menu toggle
+        // ===== MENU MOBILE TOGGLE =====
         function toggleMenu() {
             const menu = document.getElementById('mainMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
+            const toggle = document.getElementById('menuToggle');
+            const overlay = document.getElementById('menuOverlay');
+            const body = document.body;
+            
+            // Debug - verifica elementi
+            if (!menu || !toggle || !overlay) {
+                console.error('❌ Elementi menu non trovati!');
+                console.log('Menu:', menu);
+                console.log('Toggle:', toggle);
+                console.log('Overlay:', overlay);
+                return;
+            }
+            
+            // Toggle delle classi
             menu.classList.toggle('active');
-            const isExpanded = menu.classList.contains('active');
-            toggle.setAttribute('aria-expanded', isExpanded);
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            const isActive = menu.classList.contains('active');
+            toggle.setAttribute('aria-expanded', isActive);
+            
+            // Blocca/sblocca scroll
+            body.style.overflow = isActive ? 'hidden' : '';
+            
+            console.log('🔄 Menu toggled:', isActive ? 'APERTO ✅' : 'CHIUSO ❌');
         }
 
-        // Scroll to top button
-        window.addEventListener('scroll', function() {
-            const scrollBtn = document.getElementById('button-top');
-            if (window.pageYOffset > 300) {
-                scrollBtn.classList.add('visible');
-            } else {
-                scrollBtn.classList.remove('visible');
+        // Toggle submenu
+        function toggleSubmenu(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const menuItem = event.target.closest('.menu-dropdown');
+                if (menuItem) {
+                    menuItem.classList.toggle('active');
+                    console.log('📂 Submenu toggled');
+                }
+            }
+        }
+
+        // Chiudi menu dopo click
+        function closeMenuOnClick(event) {
+            if (window.innerWidth <= 768) {
+                setTimeout(() => {
+                    const menu = document.getElementById('mainMenu');
+                    if (menu && menu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                }, 200);
+            }
+        }
+
+        // Chiudi con ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mainMenu');
+                if (menu && menu.classList.contains('active')) {
+                    console.log('⌨️ Menu chiuso con ESC');
+                    toggleMenu();
+                }
             }
         });
 
-        // Load more articles
-        document.querySelector('.btn-load-more')?.addEventListener('click', function() {
-            this.textContent = 'Caricamento...';
-            setTimeout(() => {
-                this.textContent = 'Carica altri articoli';
-            }, 1000);
+        // Test al caricamento
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM caricato - FinanzAI.it Ready!');
+            console.log('📱 Menu element:', document.getElementById('mainMenu') ? '✓' : '✗');
+            console.log('🍔 Toggle element:', document.getElementById('menuToggle') ? '✓' : '✗');
+            console.log('🌑 Overlay element:', document.getElementById('menuOverlay') ? '✓' : '✗');
+            
+            // Test funzione
+            if (typeof toggleMenu === 'function') {
+                console.log('🎯 Funzione toggleMenu: ✓');
+            }
         });
 
-        // Smooth scroll
+        // ===== SCROLL TO TOP =====
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('button-top');
+            if (scrollBtn) {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            }
+        });
+
+        // ===== LOAD MORE =====
+        const loadMoreBtn = document.querySelector('.btn-load-more');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', function() {
+                this.textContent = 'Caricamento...';
+                setTimeout(() => {
+                    this.textContent = 'Carica altri articoli';
+                }, 1000);
+            });
+        }
+
+        // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
