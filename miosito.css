@@ -1653,9 +1653,8 @@ a:focus-visible {
 }
 
 /* ========== RESPONSIVE MEDIA QUERIES ========== */
-@media (max-width: 768px) {
-    body {
-        padding-top: 180px;
+body {
+        padding-top: 0;
     }
 
     #header-principale,
