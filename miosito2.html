@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <title>FinanzAI.it - Economia, Finanza e Trading</title>
+    <meta name="description" content="Il portale di riferimento per economia, finanza, trading e investimenti. Notizie aggiornate, guide pratiche e analisi di mercato.">
+    
+    <link rel="canonical" href="https://www.finanzai.it/">
+    
+    <meta property="og:title" content="FinanzAI.it - Economia, Finanza e Trading">
+    <meta property="og:description" content="Notizie e guide per investitori consapevoli">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="miosito2.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="homepage">
+    
+    <a id="button-top" class="scroll-top" href="#top" aria-label="Torna su"></a>
+    
+    <header id="header-principale" class="sticky-header">
+        <div class="container-header">
+            <div id="logo">
+                <a href="miosito2.html" aria-label="FinanzAI Homepage">
+                    <h1>FinanzAI.it</h1>
+                    <p><em>Economia, Finanza e Trading</em></p>
+                </a>
+            </div>
+            
+            <nav role="navigation" aria-label="Menu principale">
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+                    <span class="hamburger-icon"></span>
+                </button>
+                
+                <ul class="menu-principale" id="mainMenu">
+                    <li><a href="#" class="menu-link">Home</a></li>
+                    <li><a href="#investimenti" class="menu-link">Investimenti</a></li>
+                    <li><a href="#mercati" class="menu-link">Mercati</a></li>
+                    <li class="menu-dropdown">
+                        <a href="#guide" class="menu-link">
+                            Guide <span class="arrow-down">▼</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#trading">Trading</a></li>
+                            <li><a href="#crypto">Criptovalute</a></li>
+                            <li><a href="#etf">ETF</a></li>
+                            <li><a href="#azioni">Azioni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#economia" class="menu-link">Economia</a></li>
+                    <li><a href="#tools" class="menu-link">Strumenti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-homepage" id="top">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="https://picsum.photos/1920/450?random=1" type="image/jpeg">
+            <source media="(min-width: 768px)" srcset="https://picsum.photos/1024/350?random=1" type="image/jpeg">
+            <img src="https://picsum.photos/768/250?random=1" alt="FinanzAI Homepage" class="hero-image" loading="eager">
+        </picture>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2 class="hero-title">Le ultime notizie di economia e finanza</h2>
+                <p class="hero-subtitle">Rimani aggiornato sui mercati finanziari</p>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content" class="container-main">
+        
+        <!-- SEZIONE ARTICOLI IN EVIDENZA -->
+        <section class="featured-section">
+            <h2 class="section-title">In Evidenza</h2>
+            
+            <div class="featured-grid">
+                <!-- Articolo principale grande -->
+                <article class="article-card article-featured">
+                    <a href="homemoney.html" class="article-link">
+                        <figure class="article-image">
+                            <img src="https://picsum.photos/800/450?random=10" alt="Mercati finanziari 2025" loading="lazy">
+                            <span class="article-category category-mercati">Mercati</span>
+                        </figure>
+                        <div class="article-content">
+                            <h3 class="article-title">Cos'è il mercato azionario e come funziona</h3>
+                                <p class="article-excerpt">Conoscere il mercato azionario e sapere come funziona è fondamentale per investire con consapevolezza. Una guida completa su cosa sono gli scambi di azioni.</p>
+                            <div class="article-meta">
+                                <span class="article-author">Di Marco Finanza</span>
+                                <span class="separator">•</span>
+                                <time datetime="2025-10-17">17 ottobre 2025</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Due articoli medi affiancati -->
+                <article class="article-card article-medium">
+                    <a href="#articolo2" class="article-link">
+                        <figure class="article-image">
+                            <img src="https://picsum.photos/400/250?random=11" alt="Bitcoin 2025" loading="lazy">
+                            <span class="article-category category-crypto">Crypto</span>
+                        </figure>
+                        <div class="article-content">
+                            <h3 class="article-title">Bitcoin supera i $75.000: è il momento di investire?</h3>
+                            <p class="article-excerpt">La criptovaluta più famosa raggiunge nuovi massimi. Guida completa per chi vuole entrare nel mercato.</p>
+                            <div class="article-meta">
+                                <span class="article-author">Di Laura Crypto</span>
+                                <span class="separator">•</span>
+                                <time datetime="2025-10-17">17 ott 2025</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card article-medium">
+                    <a href="#articolo3" class="article-link">
+                        <figure class="article-image">
+                            <img src="https://picsum.photos/400/250?random=12" alt="ETF obbligazionari" loading="lazy">
+                            <span class="article-category category-investimenti">Investimenti</span>
+                        </figure>
+                        <div class="article-content">
+                            <h3 class="article-title">ETF obbligazionari: i migliori per il 2025</h3>
+                            <p class="article-excerpt">Con la discesa dei tassi d'interesse, gli ETF obbligazionari tornano attraenti. La nostra selezione.</p>
+                            <div class="article-meta">
+                                <span class="article-author">Di Alessandro Bonds</span>
+                                <span class="separator">•</span>
+                                <time datetime="2025-10-16">16 ott 2025</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- LAYOUT A DUE COLONNE -->
+        <div class="layout-grid">
+            <div class="main-column">
+                
+                <!-- ULTIME NOTIZIE -->
+                <section class="news-section">
+                    <h2 class="section-title">Ultime Notizie</h2>
+                    
+                    <div class="articles-list">
+                        
+                        <article class="article-card article-horizontal">
+                            <a href="#articolo4" class="article-link">
+                                <figure class="article-image">
+                                    <img src="https://picsum.photos/300/200?random=20" alt="Inflazione Europa" loading="lazy">
+                                    <span class="article-category category-economia">Economia</span>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="article-title">Inflazione in Europa: BCE pronta a nuovi tagli dei tassi</h3>
+                                    <p class="article-excerpt">L'inflazione nell'eurozona scende al 2.1%. La Banca Centrale Europea potrebbe ridurre ulteriormente i tassi d'interesse già a novembre. Cosa significa per risparmiatori e investitori.</p>
+                                    <div class="article-meta">
+                                        <span class="article-author">Di Giulia Macro</span>
+                                        <span class="separator">•</span>
+                                        <time datetime="2025-10-17">Oggi, 10:30</time>
+                                        <span class="separator">•</span>
+                                        <span class="read-time">5 min</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="article-card article-horizontal">
+                            <a href="#articolo5" class="article-link">
+                                <figure class="article-image">
+                                    <img src="https://picsum.photos/300/200?random=21" alt="Azioni tech" loading="lazy">
+                                    <span class="article-category category-mercati">Mercati</span>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="article-title">Big Tech sotto pressione: vendite dopo trimestrali deludenti</h3>
+                                    <p class="article-excerpt">Le azioni delle principali società tecnologiche americane registrano perdite significative dopo la pubblicazione dei risultati trimestrali. Analisi settore per settore e opportunità per gli investitori.</p>
+                                    <div class="article-meta">
+                                        <span class="article-author">Di Stefano Markets</span>
+                                        <span class="separator">•</span>
+                                        <time datetime="2025-10-17">Oggi, 09:15</time>
+                                        <span class="separator">•</span>
+                                        <span class="read-time">7 min</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="article-card article-horizontal">
+                            <a href="#articolo6" class="article-link">
+                                <figure class="article-image">
+                                    <img src="https://picsum.photos/300/200?random=22" alt="Trading automatico" loading="lazy">
+                                    <span class="article-category category-trading">Trading</span>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="article-title">Trading algoritmico: come l'AI sta rivoluzionando gli investimenti</h3>
+                                    <p class="article-excerpt">L'intelligenza artificiale applicata al trading automatico sta cambiando il modo di investire. Vantaggi, rischi e le migliori piattaforme disponibili in Italia per il trading algoritmico.</p>
+                                    <div class="article-meta">
+                                        <span class="article-author">Di Roberto AI</span>
+                                        <span class="separator">•</span>
+                                        <time datetime="2025-10-16">Ieri, 16:45</time>
+                                        <span class="separator">•</span>
+                                        <span class="read-time">8 min</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="article-card article-horizontal">
+                            <a href="#articolo7" class="article-link">
+                                <figure class="article-image">
+                                    <img src="https://picsum.photos/300/200?random=23" alt="Conti deposito" loading="lazy">
+                                    <span class="article-category category-risparmio">Risparmio</span>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="article-title">Conti deposito: confronto tassi ottobre 2025</h3>
+                                    <p class="article-excerpt">Analisi aggiornata dei migliori conti deposito disponibili sul mercato italiano. Tassi d'interesse, vincoli e condizioni a confronto per massimizzare il rendimento dei tuoi risparmi.</p>
+                                    <div class="article-meta">
+                                        <span class="article-author">Di Francesca Save</span>
+                                        <span class="separator">•</span>
+                                        <time datetime="2025-10-16">Ieri, 14:20</time>
+                                        <span class="separator">•</span>
+                                        <span class="read-time">6 min</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="article-card article-horizontal">
+                            <a href="#articolo8" class="article-link">
+                                <figure class="article-image">
+                                    <img src="https://picsum.photos/300/200?random=24" alt="Dividendi" loading="lazy">
+                                    <span class="article-category category-investimenti">Investimenti</span>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="article-title">Le 10 azioni con i dividendi più alti del 2025</h3>
+                                    <p class="article-excerpt">Guida alle migliori azioni da dividendo quotate a Piazza Affari e sui mercati internazionali. Rendimenti, sostenibilità e analisi fondamentale delle società più generose con gli azionisti.</p>
+                                    <div class="article-meta">
+                                        <span class="article-author">Di Paolo Dividendi</span>
+                                        <span class="separator">•</span>
+                                        <time datetime="2025-10-16">Ieri, 11:00</time>
+                                        <span class="separator">•</span>
+                                        <span class="read-time">10 min</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="article-card article-horizontal">
+                            <a href="#articolo9" class="article-link">
+                                <figure class="article-image">
+                                    <img src="https://picsum.photos/300/200?random=25" alt="Ethereum" loading="lazy">
+                                    <span class="article-category category-crypto">Crypto</span>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="article-title">Ethereum 2.0: cosa cambia per gli investitori</h3>
+                                    <p class="article-excerpt">L'aggiornamento della rete Ethereum porta novità importanti. Staking, scalabilità e impatto sul prezzo: tutto quello che devi sapere sulla seconda criptovaluta per capitalizzazione.</p>
+                                    <div class="article-meta">
+                                        <span class="article-author">Di Laura Crypto</span>
+                                        <span class="separator">•</span>
+                                        <time datetime="2025-10-15">15 ott 2025</time>
+                                        <span class="separator">•</span>
+                                        <span class="read-time">9 min</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                    </div>
+
+                    <div class="load-more-container">
+                        <button class="btn-load-more">Carica altri articoli</button>
+                    </div>
+
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- GUIDE E APPROFONDIMENTI -->
+                <section class="guides-section">
+                    <h2 class="section-title">Guide e Approfondimenti</h2>
+                    
+                    <div class="guides-grid">
+                        
+                        <article class="guide-card">
+                            <a href="#guida1" class="guide-link">
+                                <figure class="guide-image">
+                                    <img src="https://picsum.photos/350/220?random=30" alt="Guida ETF" loading="lazy">
+                                </figure>
+                                <div class="guide-content">
+                                    <span class="guide-badge">📚 Guida Completa</span>
+                                    <h3 class="guide-title">ETF per principianti: tutto quello che devi sapere</h3>
+                                    <p class="guide-excerpt">Una guida completa per iniziare a investire in ETF: cosa sono, come funzionano, quali scegliere e come costruire un portafoglio diversificato.</p>
+                                    <div class="guide-meta">
+                                        <span class="guide-author">Di Marco Finanza</span>
+                                        <span class="separator">•</span>
+                                        <span class="guide-time">15 min di lettura</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="guide-card">
+                            <a href="#guida2" class="guide-link">
+                                <figure class="guide-image">
+                                    <img src="https://picsum.photos/350/220?random=31" alt="Analisi tecnica" loading="lazy">
+                                </figure>
+                                <div class="guide-content">
+                                    <span class="guide-badge">📈 Trading</span>
+                                    <h3 class="guide-title">Analisi tecnica: corso base per principianti</h3>
+                                    <p class="guide-excerpt">Impara a leggere i grafici e a utilizzare gli indicatori tecnici più importanti per il trading. Esempi pratici e strategie operative.</p>
+                                    <div class="guide-meta">
+                                        <span class="guide-author">Di Stefano Markets</span>
+                                        <span class="separator">•</span>
+                                        <span class="guide-time">20 min di lettura</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="guide-card">
+                            <a href="#guida3" class="guide-link">
+                                <figure class="guide-image">
+                                    <img src="https://picsum.photos/350/220?random=32" alt="Piano pensione" loading="lazy">
+                                </figure>
+                                <div class="guide-content">
+                                    <span class="guide-badge">💰 Previdenza</span>
+                                    <h3 class="guide-title">Come pianificare la pensione: guida pratica</h3>
+                                    <p class="guide-excerpt">Strategie di investimento a lungo termine per costruire un capitale pensionistico. Fondi pensione, PAC e strumenti complementari.</p>
+                                    <div class="guide-meta">
+                                        <span class="guide-author">Di Francesca Save</span>
+                                        <span class="separator">•</span>
+                                        <span class="guide-time">12 min di lettura</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar-column" role="complementary">
+                
+                <!-- MERCATI IN TEMPO REALE -->
+                <div class="widget market-widget">
+                    <h3 class="widget-title">📊 Mercati in Tempo Reale</h3>
+                    <div class="market-list">
+                        <div class="market-item">
+                            <div class="market-info">
+                                <span class="market-name">FTSE MIB</span>
+                                <span class="market-value">34.567</span>
+                            </div>
+                            <span class="market-change positive">+1.23%</span>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-info">
+                                <span class="market-name">S&P 500</span>
+                                <span class="market-value">5.678</span>
+                            </div>
+                            <span class="market-change positive">+0.85%</span>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-info">
+                                <span class="market-name">NASDAQ</span>
+                                <span class="market-value">18.234</span>
+                            </div>
+                            <span class="market-change negative">-0.42%</span>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-info">
+                                <span class="market-name">Bitcoin</span>
+                                <span class="market-value">$75.432</span>
+                            </div>
+                            <span class="market-change positive">+3.67%</span>
+                        </div>
+                        <div class="market-item">
+                            <div class="market-info">
+                                <span class="market-name">EUR/USD</span>
+                                <span class="market-value">1.0856</span>
+                            </div>
+                            <span class="market-change positive">+0.15%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIÙ LETTI -->
+                <div class="widget popular-widget">
+                    <h3 class="widget-title">🔥 Più Letti</h3>
+                    
+                    <div class="popular-list">
+                        <article class="popular-item">
+                            <span class="popular-number">1</span>
+                            <div class="popular-content">
+                                <h4><a href="#pop1">Come investire 10.000 euro nel 2025</a></h4>
+                                <span class="popular-meta">124.5K visualizzazioni</span>
+                            </div>
+                        </article>
+
+                        <article class="popular-item">
+                            <span class="popular-number">2</span>
+                            <div class="popular-content">
+                                <h4><a href="#pop2">Migliori broker online: confronto 2025</a></h4>
+                                <span class="popular-meta">98.2K visualizzazioni</span>
+                            </div>
+                        </article>
+
+                        <article class="popular-item">
+                            <span class="popular-number">3</span>
+                            <div class="popular-content">
+                                <h4><a href="#pop3">Bitcoin: previsioni per fine anno</a></h4>
+                                <span class="popular-meta">87.4K visualizzazioni</span>
+                            </div>
+                        </article>
+
+                        <article class="popular-item">
+                            <span class="popular-number">4</span>
+                            <div class="popular-content">
+                                <h4><a href="#pop4">Dividendi: le azioni da comprare ora</a></h4>
+                                <span class="popular-meta">76.1K visualizzazioni</span>
+                            </div>
+                        </article>
+
+                        <article class="popular-item">
+                            <span class="popular-number">5</span>
+                            <div class="popular-content">
+                                <h4><a href="#pop5">Tassazione trading: guida completa</a></h4>
+                                <span class="popular-meta">65.8K visualizzazioni</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- NEWSLETTER -->
+                <div class="newsletter-box widget">
+                    <h3 class="widget-title">📧 Newsletter Gratuita</h3>
+                    <p>Ricevi ogni giorno le notizie più importanti di economia e finanza</p>
+                    <form class="newsletter-form" action="#" method="post">
+                        <input type="email" name="email" placeholder="La tua email" required aria-label="Indirizzo email">
+                        <button type="submit" class="btn-submit">Iscriviti Gratis</button>
+                    </form>
+                    <p class="newsletter-privacy">🔒 Privacy garantita. Cancellati quando vuoi.</p>
+                </div>
+
+                <!-- CATEGORIE -->
+                <div class="widget categories-widget">
+                    <h3 class="widget-title">📂 Categorie</h3>
+                    <ul class="categories-list">
+                        <li><a href="#investimenti">Investimenti <span class="cat-count">(245)</span></a></li>
+                        <li><a href="#mercati">Mercati <span class="cat-count">(198)</span></a></li>
+                        <li><a href="#crypto">Criptovalute <span class="cat-count">(156)</span></a></li>
+                        <li><a href="#trading">Trading <span class="cat-count">(142)</span></a></li>
+                        <li><a href="#economia">Economia <span class="cat-count">(134)</span></a></li>
+                        <li><a href="#risparmio">Risparmio <span class="cat-count">(89)</span></a></li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+
+    </main>
+
+    <footer id="footer-principale" role="contentinfo">
+        <div class="footer-content">
+            
+            <div class="footer-logo">
+                <h2 class="fallback-logo">FinanzAI.it</h2>
+            </div>
+
+            <div class="footer-social">
+                <h3>Seguici sui social</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-link social-facebook" aria-label="Facebook">
+                        <span class="icon">f</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-link social-instagram" aria-label="Instagram">
+                        <span class="icon">📷</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-link social-twitter" aria-label="Twitter">
+                        <span class="icon">𝕏</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-link social-youtube" aria-label="YouTube">
+                        <span class="icon">▶</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-link social-linkedin" aria-label="LinkedIn">
+                        <span class="icon">in</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p class="footer-description">
+                    FinanzAI.it è il portale di riferimento per investitori consapevoli. Guide pratiche, analisi approfondite e notizie in tempo reale per far crescere il tuo patrimonio.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#redazione">Redazione</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#pubblicita">Pubblicità</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#cookie">Cookie</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    <small>© 2025 FinanzAI.it - Tutti i diritti riservati | Le informazioni pubblicate non costituiscono consulenza finanziaria</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT BASE -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            menu.classList.toggle('active');
+            const isExpanded = menu.classList.contains('active');
+            toggle.setAttribute('aria-expanded', isExpanded);
+        }
+
+        // Scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('button-top');
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        // Load more articles
+        document.querySelector('.btn-load-more')?.addEventListener('click', function() {
+            this.textContent = 'Caricamento...';
+            setTimeout(() => {
+                this.textContent = 'Carica altri articoli';
+            }, 1000);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#top') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 120;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- ============================================================================
+         SISTEMA AUTO-UPDATE ARTICOLI - INTEGRATO
+         ============================================================================ -->
+    <script>
+    (function() {
+        'use strict';
+
+        // ========== CONFIGURAZIONE ==========
+        const CONFIG = {
+            apis: {
+                alphaVantage: {
+                    key: 'EL4ZEQECQXDSOEFY',
+                    newsUrl: 'https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=finance,technology&apikey=',
+                    enabled: true
+                }
+            },
+            autoRefreshInterval: 300000, // 5 minuti
+            autoRefresh: true,
+            maxArticles: 6,
+            useMockDataOnError: true
+        };
+
+        const CATEGORIES = {
+            finance: { name: 'Investimenti', class: 'category-investimenti' },
+            markets: { name: 'Mercati', class: 'category-mercati' },
+            crypto: { name: 'Crypto', class: 'category-crypto' },
+            economy: { name: 'Economia', class: 'category-economia' },
+            trading: { name: 'Trading', class: 'category-trading' },
+            savings: { name: 'Risparmio', class: 'category-risparmio' }
+        };
+
+        // ========== FUNZIONI ==========
+        async function fetchAlphaVantageNews() {
+            const api = CONFIG.apis.alphaVantage;
+            if (!api.enabled) return null;
+
+            try {
+                const response = await fetch(`${api.newsUrl}${api.key}`);
+                if (!response.ok) throw new Error('API Error');
+                
+                const data = await response.json();
+                
+                return data.feed?.slice(0, CONFIG.maxArticles).map((item, index) => ({
+                    title: item.title,
+                    excerpt: item.summary?.substring(0, 150) + '...' || 'Scopri di più su questa notizia finanziaria',
+                    author: item.authors?.[0] || 'Redazione FinanzAI',
+                    date: formatDate(new Date(item.time_published)),
+                    dateIso: new Date(item.time_published).toISOString().split('T')[0],
+                    category: mapCategory(item.topics?.[0]?.topic),
+                    image: item.banner_image || `https://picsum.photos/400/250?random=${Date.now() + index}`,
+                    url: item.url || '#',
+                    readTime: Math.ceil(item.summary?.length / 1000) + ' min'
+                }));
+            } catch (error) {
+                console.error('Errore Alpha Vantage:', error);
+                return null;
+            }
+        }
+
+        function generateMockArticles() {
+            const topics = [
+                {
+                    title: 'Mercati europei in rialzo: analisi e prospettive',
+                    excerpt: 'Le borse europee chiudono in positivo trainate dalle trimestrali positive. Analisi settoriale e previsioni per i prossimi giorni.',
+                    category: 'markets',
+                    author: 'Marco Finanza'
+                },
+                {
+                    title: 'Bitcoin supera i $75.000: è il momento giusto?',
+                    excerpt: 'La criptovaluta più famosa raggiunge nuovi massimi storici. Analisi tecnica e fondamentale per chi vuole investire.',
+                    category: 'crypto',
+                    author: 'Laura Crypto'
+                },
+                {
+                    title: 'ETF obbligazionari: i migliori del 2025',
+                    excerpt: 'Con il cambio di policy delle banche centrali, gli ETF bond tornano interessanti. La nostra selezione aggiornata.',
+                    category: 'finance',
+                    author: 'Alessandro Bonds'
+                },
+                {
+                    title: 'Inflazione in calo: cosa significa per gli investitori',
+                    excerpt: 'I dati macro mostrano un rallentamento dell\'inflazione. Analisi degli impatti su obbligazioni, azioni e valute.',
+                    category: 'economy',
+                    author: 'Giulia Macro'
+                },
+                {
+                    title: 'Trading algoritmico: guida per principianti',
+                    excerpt: 'Come funziona il trading automatico e quali sono le migliori piattaforme disponibili in Italia. Tutorial completo.',
+                    category: 'trading',
+                    author: 'Roberto AI'
+                },
+                {
+                    title: 'Conti deposito: tassi aggiornati ottobre 2025',
+                    excerpt: 'Confronto completo dei migliori conti deposito sul mercato italiano con analisi di rendimenti e condizioni.',
+                    category: 'savings',
+                    author: 'Francesca Save'
+                }
+            ];
+
+            return topics.map((topic, index) => ({
+                ...topic,
+                date: formatDate(new Date(Date.now() - index * 3600000)),
+                dateIso: new Date(Date.now() - index * 3600000).toISOString().split('T')[0],
+                image: `https://picsum.photos/400/250?random=${Date.now() + index}`,
+                url: '#articolo-' + (index + 1),
+                readTime: (5 + index) + ' min'
+            }));
+        }
+
+        function mapCategory(topic) {
+            const mapping = {
+                'finance': 'finance',
+                'technology': 'trading',
+                'blockchain': 'crypto',
+                'earnings': 'markets',
+                'economy_macro': 'economy',
+                'retail_wholesale': 'savings'
+            };
+            return mapping[topic] || 'finance';
+        }
+
+        function formatDate(date) {
+            const now = new Date();
+            const diff = now - date;
+            const hours = Math.floor(diff / 3600000);
+            
+            if (hours < 1) return 'Pochi minuti fa';
+            if (hours < 24) return `${hours} ${hours === 1 ? 'ora' : 'ore'} fa`;
+            if (hours < 48) return 'Ieri';
+            
+            return date.toLocaleDateString('it-IT', { 
+                day: 'numeric', 
+                month: 'long', 
+                year: 'numeric' 
+            });
+        }
+
+        function createArticleHTML(article, index) {
+            const categoryInfo = CATEGORIES[article.category] || CATEGORIES.finance;
+            
+            return `
+                <article class="article-card article-horizontal" data-article-index="${index}">
+                    <a href="${article.url}" class="article-link" ${article.url.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>
+                        <figure class="article-image">
+                            <img src="${article.image}" 
+                                 alt="${article.title}" 
+                                 loading="lazy"
+                                 onerror="this.src='https://picsum.photos/300/200?random=${index}'">
+                            <span class="article-category ${categoryInfo.class}">${categoryInfo.name}</span>
+                        </figure>
+                        <div class="article-content">
+                            <h3 class="article-title">${article.title}</h3>
+                            <p class="article-excerpt">${article.excerpt}</p>
+                            <div class="article-meta">
+                                <span class="article-author">Di ${article.author}</span>
+                                <span class="separator">•</span>
+                                <time datetime="${article.dateIso}">${article.date}</time>
+                                <span class="separator">•</span>
+                                <span class="read-time">${article.readTime}</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            `;
+        }
+
+        function updateArticles(articles) {
+            const articlesList = document.querySelector('.articles-list');
+            if (!articlesList) {
+                console.error('Container articoli non trovato');
+                return;
+            }
+
+            articlesList.style.opacity = '0.5';
+            articlesList.style.transition = 'opacity 0.3s ease';
+
+            setTimeout(() => {
+                articlesList.innerHTML = articles.map((article, index) => 
+                    createArticleHTML(article, index)
+                ).join('');
+
+                articlesList.style.opacity = '1';
+                updateLastRefreshTime();
+                console.log(`✅ ${articles.length} articoli aggiornati con successo`);
+            }, 300);
+        }
+
+        function showLoadingIndicator() {
+            const indicator = document.createElement('div');
+            indicator.id = 'finanzai-loading';
+            indicator.style.cssText = `
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                background: linear-gradient(135deg, #0066cc, #004499);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+                z-index: 9999;
+                font-size: 14px;
+                font-weight: 600;
+                animation: slideIn 0.3s ease;
+            `;
+            indicator.textContent = '🔄 Aggiornamento articoli...';
+            document.body.appendChild(indicator);
+        }
+
+        function hideLoadingIndicator() {
+            const indicator = document.getElementById('finanzai-loading');
+            if (indicator) {
+                indicator.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => indicator.remove(), 300);
+            }
+        }
+
+        function updateLastRefreshTime() {
+            let timestamp = document.getElementById('last-refresh-time');
+            if (!timestamp) {
+                timestamp = document.createElement('div');
+                timestamp.id = 'last-refresh-time';
+                timestamp.style.cssText = `
+                    text-align: center;
+                    color: #666;
+                    font-size: 12px;
+                    margin: 20px 0;
+                    font-style: italic;
+                `;
+                const newsSection = document.querySelector('.news-section');
+                if (newsSection) {
+                    newsSection.insertBefore(timestamp, newsSection.querySelector('.articles-list'));
+                }
+            }
+            const now = new Date();
+            timestamp.textContent = `⏱️ Ultimo aggiornamento: ${now.toLocaleTimeString('it-IT')}`;
+        }
+
+        function addRefreshButton() {
+            const button = document.createElement('button');
+            button.id = 'manual-refresh-btn';
+            button.innerHTML = '🔄 Aggiorna Notizie';
+            button.style.cssText = `
+                background: linear-gradient(135deg, #0066cc, #004499);
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 700;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(0,102,204,0.3);
+                transition: all 0.3s ease;
+                margin: 20px auto;
+                display: block;
+            `;
+            
+            button.onmouseover = () => {
+                button.style.transform = 'translateY(-2px)';
+                button.style.boxShadow = '0 4px 12px rgba(0,102,204,0.4)';
+            };
+            
+            button.onmouseout = () => {
+                button.style.transform = 'translateY(0)';
+                button.style.boxShadow = '0 2px 8px rgba(0,102,204,0.3)';
+            };
+            
+            button.onclick = () => loadAndUpdateArticles();
+            
+            const sectionTitle = document.querySelector('.news-section .section-title');
+            if (sectionTitle) {
+                sectionTitle.parentNode.insertBefore(button, sectionTitle.nextSibling);
+            }
+        }
+
+        async function loadAndUpdateArticles() {
+            showLoadingIndicator();
+            
+            try {
+                let articles = null;
+                
+                if (CONFIG.apis.alphaVantage.enabled) {
+                    articles = await fetchAlphaVantageNews();
+                }
+                
+                if (!articles && CONFIG.useMockDataOnError) {
+                    console.warn('⚠️ API non disponibili, uso dati demo');
+                    articles = generateMockArticles();
+                }
+                
+                if (articles && articles.length > 0) {
+                    updateArticles(articles);
+                } else {
+                    console.error('❌ Nessun articolo disponibile');
+                }
+                
+            } catch (error) {
+                console.error('Errore nel caricamento articoli:', error);
+                if (CONFIG.useMockDataOnError) {
+                    updateArticles(generateMockArticles());
+                }
+            } finally {
+                hideLoadingIndicator();
+            }
+        }
+
+        function init() {
+            console.log('🚀 Sistema aggiornamento FinanzAI inizializzato');
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(400px); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(400px); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            addRefreshButton();
+            loadAndUpdateArticles();
+            
+            if (CONFIG.autoRefresh && CONFIG.autoRefreshInterval > 0) {
+                setInterval(() => {
+                    console.log('🔄 Aggiornamento automatico articoli...');
+                    loadAndUpdateArticles();
+                }, CONFIG.autoRefreshInterval);
+                
+                console.log(`⏰ Aggiornamento automatico ogni ${CONFIG.autoRefreshInterval / 60000} minuti`);
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+
+    })();
+    </script>
+
+</body>
+</html>
