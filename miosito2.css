@@ -1,6 +1,6 @@
 /* ============================================================================
-   FINANZAI.IT - HOMEPAGE CSS COMPLETO
-   Design professionale con Mobile stile Money.it
+   FINANZAI.IT - HOMEPAGE CSS
+   Design professionale stile Money.it / Il Post
    ============================================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
@@ -158,7 +158,7 @@ img {
     line-height: 1;
 }
 
-/* ========== MENU CON FLEXBOX ========== */
+/* ========== MENU CON FLEXBOX - IDENTICO A MIOSITO ========== */
 nav {
     flex: 1 1 auto;
     display: flex;
@@ -200,7 +200,7 @@ nav ul.menu-principale li a:hover,
     border: none;
 }
 
-/* ========== DROPDOWN MENU ========== */
+/* ========== DROPDOWN MENU - IDENTICO A MIOSITO ========== */
 .menu-dropdown {
     position: relative;
 }
@@ -293,6 +293,7 @@ nav ul.menu-principale li a:hover,
 .hamburger-icon::after {
     top: 8px;
 }
+}
 
 /* ========== HERO HOMEPAGE ========== */
 .hero-homepage {
@@ -363,7 +364,7 @@ nav ul.menu-principale li a:hover,
     margin: var(--spacing-3xl) 0;
 }
 
-/* ========== FEATURED GRID ========== */
+/* ========== FEATURED GRID - ARTICOLI IN EVIDENZA ========== */
 .featured-section {
     margin-bottom: var(--spacing-3xl);
 }
@@ -422,6 +423,7 @@ nav ul.menu-principale li a:hover,
     transform: scale(1.05);
 }
 
+/* Category badge */
 .article-category {
     position: absolute;
     top: 12px;
@@ -443,6 +445,7 @@ nav ul.menu-principale li a:hover,
 .category-trading { background: var(--accent-teal); }
 .category-risparmio { background: var(--accent-red); }
 
+/* Article content */
 .article-content {
     padding: var(--spacing-lg);
 }
@@ -491,6 +494,7 @@ nav ul.menu-principale li a:hover,
     color: var(--text-muted);
 }
 
+/* Featured sizes */
 .article-featured .article-image {
     height: 400px;
 }
@@ -499,7 +503,7 @@ nav ul.menu-principale li a:hover,
     height: 250px;
 }
 
-/* ========== LAYOUT GRID ========== */
+/* ========== LAYOUT GRID - DUE COLONNE ========== */
 .layout-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -513,7 +517,7 @@ nav ul.menu-principale li a:hover,
     }
 }
 
-/* ========== ARTICLES LIST ========== */
+/* ========== ARTICLES LIST - ORIZZONTALI ========== */
 .articles-list {
     display: flex;
     flex-direction: column;
@@ -545,7 +549,7 @@ nav ul.menu-principale li a:hover,
     -webkit-line-clamp: 2;
 }
 
-/* ========== LOAD MORE ========== */
+/* ========== LOAD MORE BUTTON ========== */
 .load-more-container {
     text-align: center;
     margin-top: var(--spacing-3xl);
@@ -571,7 +575,7 @@ nav ul.menu-principale li a:hover,
     box-shadow: var(--shadow-md);
 }
 
-/* ========== GUIDES ========== */
+/* ========== GUIDES SECTION ========== */
 .guides-section {
     margin-top: var(--spacing-3xl);
 }
@@ -790,7 +794,7 @@ nav ul.menu-principale li a:hover,
     color: var(--text-muted);
 }
 
-/* ========== NEWSLETTER ========== */
+/* ========== NEWSLETTER WIDGET ========== */
 .newsletter-box {
     background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
     color: white;
@@ -858,7 +862,7 @@ nav ul.menu-principale li a:hover,
     margin-top: var(--spacing-sm);
 }
 
-/* ========== CATEGORIES ========== */
+/* ========== CATEGORIES WIDGET ========== */
 .categories-list {
     list-style: none;
     margin: 0;
@@ -1043,83 +1047,25 @@ nav ul.menu-principale li a:hover,
     transform: translateY(-5px);
 }
 
-/* ========== MOBILE: NAVBAR MINIMAL STILE MONEY.IT ========== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    
-    /* HEADER: Super compatto */
-    #header-principale {
-        padding: 8px 12px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-        border-bottom: none;
-    }
-    
     .container-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    /* LOGO: Piccolo */
-    #logo {
-        text-align: left;
-        flex: 1;
-    }
-    
-    #logo h1 {
-        font-size: 22px;
-        margin-bottom: 0;
-    }
-    
-    #logo p {
-        font-size: 9px;
-        margin-top: 2px;
-        opacity: 0.7;
-    }
-    
-    /* HAMBURGER: Discreto */
-    nav {
-        flex: 0 0 auto;
-        width: auto;
-    }
-    
-    .mobile-menu-toggle {
-        display: block;
-        padding: 4px;
-    }
-    
-    .hamburger-icon {
-        width: 20px;
-        height: 2px;
-    }
-    
-    .hamburger-icon::before,
-    .hamburger-icon::after {
-        width: 20px;
-        height: 2px;
-    }
-    
-    .hamburger-icon::before {
-        top: -6px;
-    }
-    
-    .hamburger-icon::after {
-        top: 6px;
-    }
-    
-    /* MENU: Full screen overlay */
-    .menu-principale {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: white;
-        z-index: 9999;
         flex-direction: column;
-        padding: 70px 20px 20px;
-        overflow-y: auto;
+        align-items: stretch;
+    }
+    
+    #logo {
+        text-align: center;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    .menu-principale {
+        flex-direction: column;
+        gap: 0;
+        display: none;
     }
     
     .menu-principale.active {
@@ -1128,435 +1074,93 @@ nav ul.menu-principale li a:hover,
     
     .menu-principale li {
         width: 100%;
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid var(--gray-200);
     }
     
     .menu-link {
-        padding: 14px 0;
-        text-align: left;
-        font-size: 17px;
+        text-align: center;
         border-radius: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        align-self: center;
     }
     
     .submenu {
         position: static;
         box-shadow: none;
-        background: #fafafa;
-        border-top: none;
-        padding: 0;
-        margin-top: 8px;
+        background: var(--gray-50);
+        display: none;
     }
     
-    .submenu a {
-        padding: 10px 16px;
-        font-size: 15px;
+    .menu-dropdown.active .submenu {
+        display: block;
     }
     
-    /* HERO */
-    .hero-homepage {
-        max-height: 180px;
-        margin-bottom: 20px;
-    }
-    
-    .hero-title {
-        font-size: 18px;
-    }
-    
-    .hero-subtitle {
-        font-size: 13px;
-    }
-    
-    /* SECTION TITLE */
-    .section-title {
-        font-size: 19px;
-        margin-bottom: 16px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid #28a745;
-    }
-    
-    /* FEATURED GRID */
-    .featured-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    /* ARTICOLO PRINCIPALE: Grande come Money.it */
-    .article-featured {
-        grid-column: 1;
-    }
-    
-    .article-featured .article-image {
-        height: 260px;
-    }
-    
-    .article-featured .article-category {
-        background: #28a745;
-        font-size: 10px;
-        padding: 4px 8px;
-        top: 10px;
-        left: 10px;
-        border-radius: 3px;
-    }
-    
-    .article-featured .article-content {
-        padding: 18px 14px;
-    }
-    
-    .article-featured .article-title {
-        font-size: 22px;
-        line-height: 1.25;
-        margin-bottom: 10px;
-        font-weight: 700;
-        color: #000000;
-    }
-    
-    .article-featured .article-excerpt {
-        font-size: 15px;
-        line-height: 1.5;
-        color: #555555;
-    }
-    
-    .article-featured .article-meta {
-        font-size: 12px;
-        color: #999999;
-    }
-    
-    /* ARTICOLI MEDI */
-    .article-medium .article-image {
-        height: 170px;
-    }
-    
-    .article-medium .article-title {
-        font-size: 16px;
-        line-height: 1.3;
-    }
-    
-    .article-medium .article-excerpt {
-        font-size: 14px;
-        -webkit-line-clamp: 2;
-    }
-    
-    .article-medium .article-content {
-        padding: 14px;
-    }
-    
-    .article-medium .article-category {
-        font-size: 10px;
-        padding: 4px 8px;
-    }
-    
-    /* LAYOUT GRID */
-    .layout-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-    
-    /* ARTICOLI ORIZZONTALI */
     .article-horizontal {
-        flex-direction: row;
-        gap: 12px;
-        padding: 14px 0;
-        border-bottom: 1px solid #e0e0e0;
-        background: transparent;
-    }
-    
-    .article-horizontal:last-child {
-        border-bottom: none;
+        flex-direction: column;
     }
     
     .article-horizontal .article-image {
-        flex: 0 0 90px;
-        width: 90px;
-        height: 90px;
-        border-radius: 6px;
-    }
-    
-    .article-horizontal .article-content {
         flex: 1;
-        padding: 0;
+        width: 100%;
+        height: 200px;
     }
     
-    .article-horizontal .article-title {
-        font-size: 15px;
-        line-height: 1.3;
-        margin-bottom: 6px;
-        font-weight: 600;
-        color: #000000;
+    .hero-homepage {
+        max-height: 250px;
     }
     
-    .article-horizontal .article-excerpt {
-        display: none;
+    .featured-grid {
+        grid-template-columns: 1fr;
     }
     
-    .article-horizontal .article-meta {
-        font-size: 11px;
-        color: #999999;
-    }
-    
-    /* GUIDES */
     .guides-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
     }
     
-    .guide-card {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-    }
-    
-    .guide-image {
-        flex: 0 0 90px;
-        width: 90px;
-        height: 90px;
-    }
-    
-    .guide-content {
-        flex: 1;
-        padding: 0;
-    }
-    
-    .guide-title {
-        font-size: 15px;
-        line-height: 1.3;
-        margin-bottom: 4px;
-    }
-    
-    .guide-excerpt {
-        display: none;
-    }
-    
-    .guide-badge {
-        font-size: 10px;
-        padding: 2px 8px;
-        margin-bottom: 6px;
-    }
-    
-    /* SIDEBAR */
-    .widget {
-        padding: 18px 14px;
-        margin-bottom: 20px;
-        box-shadow: none;
-        border: 1px solid #e0e0e0;
-    }
-    
-    .widget-title {
-        font-size: 15px;
-        margin-bottom: 14px;
-        padding-bottom: 10px;
-    }
-    
-    .market-item {
-        padding: 10px;
-    }
-    
-    .market-name {
-        font-size: 13px;
-    }
-    
-    .market-value {
-        font-size: 11px;
-    }
-    
-    .market-change {
-        font-size: 12px;
-        padding: 3px 6px;
-    }
-    
-    .popular-item {
-        gap: 10px;
-    }
-    
-    .popular-number {
-        width: 26px;
-        height: 26px;
-        font-size: 12px;
-    }
-    
-    .popular-content h4 {
-        font-size: 13px;
-    }
-    
-    .popular-meta {
-        font-size: 11px;
-    }
-    
-    /* FOOTER */
     .footer-links ul {
         flex-direction: column;
         text-align: center;
-        gap: 10px;
+        gap: var(--spacing-md);
     }
     
     .footer-links .separator {
         display: none;
     }
-    
-    .social-link {
-        width: 36px;
-        height: 36px;
-        font-size: 15px;
-    }
-    
-    /* CONTAINER */
-    .container-main {
-        padding: 20px 14px;
-    }
-    
-    /* PULSANTI */
-    .btn-load-more {
-        width: 100%;
-        padding: 14px;
-    }
-    
-    .scroll-top {
-        width: 42px;
-        height: 42px;
-        bottom: 16px;
-        right: 16px;
-        font-size: 18px;
-    }
-    
-    /* CATEGORIE COLORATE */
-    .category-mercati,
-    .category-investimenti,
-    .category-economia {
-        background: #28a745 !important;
-    }
-    
-    .category-crypto {
-        background: #ff9800 !important;
-    }
-    
-    .category-trading {
-        background: #009688 !important;
-    }
-    
-    .category-risparmio {
-        background: #c41e3a !important;
-    }
-    
-    /* CARD: Stile Money.it */
-    body {
-        background-color: #ffffff;
-    }
-    
-    .article-card {
-        border-radius: 10px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    }
-    
-    .article-card:hover {
-        transform: none;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    }
-    
-    .article-card:hover .article-image img {
-        transform: none;
-    }
-    
-    .separator {
-        opacity: 0.4;
-    }
-    
-    /* NO ANIMAZIONI */
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition: none !important;
-    }
-    
-    .menu-principale {
-        transition: opacity 0.15s ease !important;
-    }
 }
 
-/* ========== SMARTPHONE PICCOLI ========== */
 @media (max-width: 480px) {
-    
-    #header-principale {
-        padding: 6px 10px;
-    }
-    
     #logo h1 {
-        font-size: 20px;
-    }
-    
-    #logo p {
-        font-size: 8px;
-    }
-    
-    .hamburger-icon {
-        width: 18px;
-        height: 2px;
-    }
-    
-    .hamburger-icon::before,
-    .hamburger-icon::after {
-        width: 18px;
-    }
-    
-    .hero-homepage {
-        max-height: 150px;
-    }
-    
-    .hero-title {
-        font-size: 16px;
-    }
-    
-    .hero-subtitle {
-        font-size: 12px;
-    }
-    
-    .article-featured .article-image {
-        height: 200px;
-    }
-    
-    .article-featured .article-title {
-        font-size: 19px;
-    }
-    
-    .article-featured .article-excerpt {
-        font-size: 14px;
-    }
-    
-    .article-featured .article-content {
-        padding: 14px 12px;
-    }
-    
-    .article-medium .article-image {
-        height: 150px;
-    }
-    
-    .article-medium .article-title {
-        font-size: 15px;
-    }
-    
-    .article-medium .article-content {
-        padding: 12px;
-    }
-    
-    .article-horizontal .article-image {
-        flex: 0 0 75px;
-        width: 75px;
-        height: 75px;
-    }
-    
-    .article-horizontal .article-title {
-        font-size: 14px;
-    }
-    
-    .container-main {
-        padding: 16px 12px;
-    }
-    
-    .widget {
-        padding: 14px 12px;
+        font-size: 28px;
     }
     
     .section-title {
+        font-size: 22px;
+    }
+    
+    .article-title {
         font-size: 18px;
+    }
+    
+    .article-featured .article-title {
+        font-size: 22px;
+    }
+    
+    .article-horizontal .article-title {
+        font-size: 16px;
+    }
+    
+    .widget {
+        padding: var(--spacing-md);
+    }
+    
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
     }
 }
 
@@ -1576,7 +1180,7 @@ nav ul.menu-principale li a:hover,
     animation: fadeIn 0.5s ease-out;
 }
 
-/* ========== UTILITY ========== */
+/* ========== UTILITY CLASSES ========== */
 .text-center {
     text-align: center;
 }
@@ -1589,7 +1193,7 @@ nav ul.menu-principale li a:hover,
     display: block !important;
 }
 
-/* ========== PRINT ========== */
+/* ========== PRINT STYLES ========== */
 @media print {
     header,
     .sidebar-column,
