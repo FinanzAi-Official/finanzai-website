@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     
-    <title>La Bolla delle Auto Elettriche Cinesi - FinanzAI.it</title>
-    <meta name="description" content="L'Evergrande dell'industria automobilistica elettrica cinese esiste già: analisi del settore auto elettriche in Cina e le sue ripercussioni globali.">
+    <title>La Bolla delle Auto Elettriche Cinesi | FinanzAI.it</title>
+    <meta name="description" content="Analisi approfondita di Marco Casario sulla crisi del settore auto elettriche in Cina. L'Evergrande dell'industria automobilistica esiste già.">
     
     <link rel="canonical" href="https://www.finanzai.it/bolla-auto-elettriche-cina">
     
-    <meta property="og:title" content="La Bolla delle Auto Elettriche Cinesi: Un Bagno di Sangue Annunciato">
-    <meta property="og:description" content="Warren Buffett ha venduto tutte le sue azioni BYD. Cosa sta succedendo nel mercato delle auto elettriche cinesi?">
+    <meta property="og:title" content="La Bolla delle Auto Elettriche Cinesi">
+    <meta property="og:description" content="Warren Buffett vende BYD: la bolla delle auto elettriche cinesi esiste già, solo che non è ancora esplosa.">
     <meta property="og:type" content="article">
     
-    <link rel="stylesheet" href="miosito.css">
+    <link rel="stylesheet" href="miosito1.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="homepage">
+<body class="blog-page">
     
     <a id="button-top" class="scroll-top" href="#top" aria-label="Torna su"></a>
     
     <!-- Overlay scuro per menu mobile -->
-    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
     
     <header id="header-principale" class="sticky-header">
         <div class="container-header">
@@ -37,7 +37,7 @@
             
             <!-- Logo (centro su mobile) -->
             <div id="logo">
-                <a href="homemoney.html" aria-label="FinanzAI Homepage">
+                <a href="miosito2.html" aria-label="FinanzAI Homepage">
                     <h1>FinanzAI.it</h1>
                     <p><em>Economia, Finanza e Trading</em></p>
                 </a>
@@ -46,228 +46,551 @@
             <!-- Navigazione -->
             <nav role="navigation" aria-label="Menu principale">
                 <ul class="menu-principale" id="mainMenu">
-                    <li><a href="#" class="menu-link" onclick="closeMenuOnClick(event)">Home</a></li>
-                    <li><a href="#investimenti" class="menu-link" onclick="closeMenuOnClick(event)">Investimenti</a></li>
-                    <li><a href="#mercati" class="menu-link" onclick="closeMenuOnClick(event)">Mercati</a></li>
+                    <li><a href="miosito2.html" class="menu-link">Home</a></li>
+                    <li><a href="#investimenti" class="menu-link">Investimenti</a></li>
+                    <li><a href="#mercati" class="menu-link">Mercati</a></li>
                     <li class="menu-dropdown">
                         <a href="#guide" class="menu-link" onclick="toggleSubmenu(event)">
                             Guide <span class="arrow-down">▼</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#trading" onclick="closeMenuOnClick(event)">Trading</a></li>
-                            <li><a href="#crypto" onclick="closeMenuOnClick(event)">Criptovalute</a></li>
-                            <li><a href="#etf" onclick="closeMenuOnClick(event)">ETF</a></li>
-                            <li><a href="#azioni" onclick="closeMenuOnClick(event)">Azioni</a></li>
+                            <li><a href="#trading">Trading</a></li>
+                            <li><a href="#crypto">Criptovalute</a></li>
+                            <li><a href="#etf">ETF</a></li>
+                            <li><a href="#azioni">Azioni</a></li>
                         </ul>
                     </li>
-                    <li><a href="#economia" class="menu-link" onclick="closeMenuOnClick(event)">Economia</a></li>
-                    <li><a href="#tools" class="menu-link" onclick="closeMenuOnClick(event)">Strumenti</a></li>
+                    <li><a href="#economia" class="menu-link">Economia</a></li>
+                    <li><a href="#tools" class="menu-link">Strumenti</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="hero-homepage" id="top">
+    <div class="hero-blog" id="top">
         <picture>
-            <source media="(min-width: 1024px)" srcset="https://picsum.photos/1920/450?random=100" type="image/jpeg">
-            <source media="(min-width: 768px)" srcset="https://picsum.photos/1024/350?random=100" type="image/jpeg">
-            <img src="https://picsum.photos/768/250?random=100" alt="Auto elettriche cinesi" class="hero-image" loading="eager">
+            <source media="(min-width: 1024px)" srcset="https://picsum.photos/1920/400?random=100" type="image/jpeg">
+            <source media="(min-width: 768px)" srcset="https://picsum.photos/1024/300?random=100" type="image/jpeg">
+            <img src="https://picsum.photos/768/200?random=100" alt="La Bolla delle Auto Elettriche Cinesi" class="hero-image" loading="eager">
         </picture>
         <div class="hero-overlay">
             <div class="hero-content">
-                <h2 class="hero-title">La Bolla delle Auto Elettriche Cinesi</h2>
-                <p class="hero-subtitle">Un'analisi approfondita di Marco Casario</p>
+                <p class="hero-title">La Bolla delle Auto Elettriche Cinesi: Un Bagno di Sangue Annunciato</p>
+                <p class="hero-author">Analisi di Marco Casario</p>
             </div>
         </div>
     </div>
 
     <main id="main-content" class="container-main">
-        
-        <!-- SEZIONE ARTICOLO PRINCIPALE -->
-        <section class="featured-section">
-            
-            <div class="featured-grid">
-                <!-- Articolo principale -->
-                <article class="article-card article-featured">
-                    <div class="article-content">
-                        <h3 class="article-title">La "Evergrande" delle Auto Elettriche Esiste Già</h3>
-                        <p class="article-excerpt">Il canarino nella miniera di carbone ha smesso di cantare. Una frase buttata lì quasi per caso durante un'intervista ha gelato il sangue degli investitori: "La bolla delle macchine elettriche cinesi esiste già, solo che non è ancora esplosa."</p>
-                        <div class="article-meta">
-                            <span class="article-author">Di Marco Casario</span>
-                            <span class="separator">•</span>
-                            <time datetime="2025-10-24">24 ottobre 2025</time>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <!-- LAYOUT A DUE COLONNE -->
         <div class="layout-grid">
             <div class="main-column">
                 
-                <!-- CONTENUTO ARTICOLO -->
-                <section class="news-section">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#guide">Economia</a></li>
+                        <li><a href="#investimenti">Mercati</a></li>
+                        <li aria-current="page">La Bolla delle Auto Elettriche Cinesi</li>
+                    </ol>
+                </nav>
+
+                <article id="articolo-investimenti" itemscope itemtype="https://schema.org/Article">
                     
-                    <div class="articles-list">
+                    <header class="article-header">
+                        <h2 class="titolo-articolo" itemprop="headline">
+                            La Bolla delle Auto Elettriche Cinesi: Un Bagno di Sangue Annunciato
+                        </h2>
                         
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Il Segnale di Warren Buffett</h2>
-                                <p>Per capire cosa sta davvero accadendo, dobbiamo partire da un segnale silenzioso lanciato dall'oracolo di Omaha, Warren Buffett. Immaginatevelo: per 15 anni ha tenuto in portafoglio il gioiello della corona cinese BYD. Ha cavalcato l'onda perfetta, l'ascesa dell'elettrico e soprattutto la marea dei sussidi che il Partito Comunista cinese ha riversato sul settore. Un investimento leggendario con profitti stratosferici.</p>
-                                
-                                <p>Poi un giorno, senza dire una parola, inizia a vendere. Non un po', tutto, fino all'ultima azione. Vedete, Buffett non è uno che gioca d'azzardo, lui guarda al futuro. E se dopo aver cavalcato un'onda per 15 anni all'improvviso salta giù dalla tavola, significa che ha visto lo scoglio, anzi ha visto lo tsunami. Non vede più margini di sicurezza, non vede più potenziale, ha visto il rischio. E quando Warren Buffett vede il rischio, scappa.</p>
-                            </div>
-                        </article>
+                        <div class="article-meta">
+                            <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <a href="" itemprop="url">
+                                    <span class="icon-user" aria-hidden="true">👤</span>
+                                    <span itemprop="name"><strong>Marco Casario</strong></span>
+                                </a>
+                            </span>
+                            <span class="separator">|</span>
+                            <time datetime="2025-10-24" itemprop="datePublished" class="publish-date">
+                                <span class="icon-calendar" aria-hidden="true">📅</span>
+                                24 ottobre 2025
+                            </time>
+                        </div>
+                    </header>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Una Gigantesca Sbornia Industriale</h2>
-                                <p>Salve a tutti, Marco Casario qui. C'è una gigantesca sbornia industriale dopo una festa selvaggia, dopo una festa drogata con fiumi di denaro pubblico. Un castello di carte costruito su pratiche insostenibili che si sta sgretolando.</p>
-                                
-                                <p>La situazione è talmente grave che uno dei più importanti amministratori delegati del settore in Cina ha appena lanciato un allarme che ha il suono di una sentenza: ha definito l'elettrico un "bagno di sangue" e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori di auto elettriche.</p>
-                                
-                                <p>E questa volta, a differenza della bolla immobiliare le cui macerie sono rimaste confinate in Cina, le conseguenze di un crollo automobilistico si riverserebbero come uno tsunami su tutto il mondo, Italia compresa. Perché vedete, questa intera industria non si regge in piedi da sola: è collegata ad una macchina, una macchina a cuore polmone che pompa ossigeno artificiale nelle sue vene di giorno e di notte. E questa macchina sono i sussidi, gli aiuti di stato e i crediti di imposta.</p>
-                                
-                                <p><strong>Staccate la spina di questa macchina e tutto si ferma. Un colpo secco, silenzio, linea piatta.</strong></p>
-                            </div>
-                        </article>
+                    <p class="abstract lead-paragraph" itemprop="description">
+                        <em>Il canarino nella miniera di carbone ha smesso di cantare. "La bolla delle macchine elettriche cinesi esiste già, solo che non è ancora esplosa." Una frase che gela il sangue, pronunciata dall'amministratore delegato di un colosso delle auto cinesi.</em>
+                    </p>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Il Mostro Creato dal Partito Comunista</h2>
-                                <p>Ma da dove arrivano tutti questi soldi? Vedete, dopo il crollo controllato del settore immobiliare, il Partito Comunista cinese, nel disperato tentativo di mantenere alti i tassi di crescita del prodotto interno lordo, ha iniettato miliardi spingendo, incentivando e creando un mostro con una capacità produttiva talmente eccessiva da non poter essere assorbita né dalla Cina né dal resto del mondo. Ed ora il mostro sta iniziando a divorare se stesso.</p>
-                                
-                                <p>La scintilla che ha acceso questo campanello d'allarme è stata la dichiarazione passata quasi in sordina, ma che per chi sa leggere tra le righe è suonata come una sirena d'allarme in piena notte. La stessa vicepresidente di BYD, il colosso che sta conquistando il mondo, ha parlato, senza mezzi termini, di un bagno di sangue imminente e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori.</p>
-                                
-                                <p>Pensate a questo numero: l'anno scorso in Cina c'erano <strong>129 marchi diversi</strong> che vendevano auto elettriche o ibride. 129. Secondo gli esperti, entro il 2030 di questi 129 ne sopravviveranno forse <strong>15 in totale</strong>. È un'apocalisse annunciata.</p>
-                            </div>
-                        </article>
+                    <figure class="featured-image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="https://picsum.photos/800/400?random=101" type="image/jpeg">
+                            <img src="https://picsum.photos/600/300?random=101" alt="Auto elettriche cinesi crisi" itemprop="url" loading="lazy" width="100%">
+                        </picture>
+                        <figcaption itemprop="caption">Il settore delle auto elettriche cinesi sta per esplodere</figcaption>
+                    </figure>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>La Guerra dei Prezzi Fratricida</h2>
-                                <p>E la cosa ancora più surreale è che per rimanere a galla molte di queste aziende sono costrette a vendere in perdita o a svendere i propri prodotti in una guerra dei prezzi fratricida, una spirale discendente che Pechino stessa sta cercando disperatamente di fermare perché sta trascinando l'intera economia del paese verso la deflazione. E questa non è un'ipotesi, è una realtà che sta già accadendo oggi.</p>
-                                
-                                <p>Se guardiamo indietro scopriamo che il numero di partenza era ancora più folle. Nel 2018 esistevano <strong>500 produttori</strong> di veicoli elettrici in Cina, 500. Un'intera foresta di aziende nate dal nulla grazie al grande piano made in China 2025, un progetto con cui Xi Jinping voleva trasformare la Cina nel leader tecnologico mondiale. E per certi versi ci sono riusciti. Hanno letteralmente dipinto la mappa del mondo con i loro colori, dominando non solo in Asia, ma sbarcando in forza in Europa e Sudamerica.</p>
-                                
-                                <p>Ma a quale costo?</p>
-                            </div>
-                        </article>
+                    <div class="article-body" itemprop="articleBody">
+                        
+                        <section>
+                            <h2>🔹 Il Segnale di Warren Buffett</h2>
+                            
+                            <p class="paragrafo-intro">
+                                Per capire cosa sta davvero accadendo, dobbiamo partire da un segnale silenzioso lanciato dall'oracolo di Omaha, <strong>Warren Buffett</strong>. Immaginatevelo: per 15 anni ha tenuto in portafoglio il gioiello della corona cinese BYD. Ha cavalcato l'onda perfetta, l'ascesa dell'elettrico e soprattutto la marea dei sussidi che il Partito Comunista cinese ha riversato sul settore.
+                            </p>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>L'Economia Pianificata alla Sovietica</h2>
-                                <p>Un recente reportaggio della Reuters ha squarciato il velo mostrando un quadro che ricorda sinisticamente l'economia pianificata dell'Unione Sovietica: fabbriche che producono senza sosta, non per soddisfare una domanda reale, ma per raggiungere obiettivi imposti dall'alto dal partito. Concessionari con i piazzali talmente pieni di auto invendute da dover ricorrere a trucchi contabili, registrando le auto come vendute a se stessi, solo per incassare i bonus dalle case madri.</p>
-                                
-                                <p>Immaginatevi scene surreali: auto nuove di zecca che accumulano polvere mentre sulla carta risultano già vendute. Solo il <strong>30% dei concessionari in Cina è in attivo</strong>.</p>
-                                
-                                <p>E perché questa ossessione per la produzione e la vendita? Perché ogni governatore locale, per compiacere Pechino, ha voluto la sua fabbrica di automobili, offrendo terreni a basso costo e sussidi e creando una duplicazione folle degli investimenti. Hanno costruito una capacità produttiva doppia rispetto a quella che effettivamente utilizzavano ed ora si ritrovano con questo enorme eccesso che, come uno tsunami, si sta riversando sui mercati globali.</p>
+                            <div class="box-info highlight-box">
+                                <h3 class="box-title">Un investimento leggendario abbandonato</h3>
+                                <p>Poi un giorno, senza dire una parola, inizia a vendere. Non un po', <strong>tutto</strong>, fino all'ultima azione. Vedete, Buffett non è uno che gioca d'azzardo, lui guarda al futuro. E se dopo aver cavalcato un'onda per 15 anni all'improvviso salta giù dalla tavola, significa che ha visto lo scoglio, anzi ha visto lo tsunami.</p>
                             </div>
-                        </article>
+                            
+                            <p>Non vede più margini di sicurezza, non vede più potenziale, ha visto il rischio. E quando Warren Buffett vede il rischio, scappa. E allora ti chiedi: cos'è che ha visto?</p>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>L'Obiettivo Strategico: Sicurezza Energetica</h2>
-                                <p>Ma non è solo una questione economica. Dietro questa spinta c'è anche un obiettivo strategico, quasi militare: la sicurezza energetica. La Cina è il più grande importatore di petrolio al mondo e sa bene che le rotte marittime sono controllate dagli Stati Uniti. In caso di conflitto, le sue forniture potrebbero essere tagliate.</p>
-                                
-                                <p>E quindi inondare il mondo di auto elettriche è anche un modo per ridurre la propria dipendenza dal petrolio, una mossa da maestri sulla scacchiera geopolitica globale.</p>
+                            <h3>📊 Il Quadro Generale</h3>
+                            
+                            <ul class="lista-vantaggi">
+                                <li><strong>Salve a tutti, Marco Casario qui.</strong> C'è una gigantesca sbornia industriale dopo una festa selvaggia</li>
+                                <li><strong>Un castello di carte:</strong> costruito su pratiche insostenibili che si sta sgretolando</li>
+                                <li><strong>L'allarme:</strong> Un amministratore delegato del settore ha definito l'elettrico un "bagno di sangue"</li>
+                                <li><strong>Le conseguenze:</strong> Si riverserebbero come uno tsunami su tutto il mondo, Italia compresa</li>
+                            </ul>
+                        </section>
+
+                        <figure class="inline-image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="https://picsum.photos/600/300?random=102">
+                                <img src="https://picsum.photos/500/250?random=102" alt="Warren Buffett BYD" loading="lazy">
+                            </picture>
+                            <figcaption>Warren Buffett ha venduto tutte le sue azioni BYD dopo 15 anni</figcaption>
+                        </figure>
+
+                        <section>
+                            <h2>🔹 La Macchina a Cuore Polmone</h2>
+                            
+                            <p>Questa intera industria non si regge in piedi da sola: è collegata ad una macchina, una macchina a cuore polmone che pompa ossigeno artificiale nelle sue vene di giorno e di notte. E questa macchina sono <strong>i sussidi, gli aiuti di stato e i crediti di imposta</strong>.</p>
+
+                            <div class="requisiti-grid">
+                                <div class="requisito-item">
+                                    <h4>💰 I Sussidi</h4>
+                                    <p>Staccate la spina di questa macchina e tutto si ferma. Un colpo secco, silenzio, linea piatta.</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>🏭 Il Mostro</h4>
+                                    <p>Capacità produttiva talmente eccessiva da non poter essere assorbita né dalla Cina né dal resto del mondo</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>📉 Il Crollo</h4>
+                                    <p>Il mostro sta iniziando a divorare se stesso in una spirale discendente</p>
+                                </div>
                             </div>
-                        </article>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Il Caso BYD: I Trucchi Contabili</h2>
-                                <p>Ma torniamo proprio al caso di BYD. Perché se si va a leggere attentamente il suo bilancio si scopre una cosa sconcertante. <strong>Quasi un quarto del suo utile netto non deriva dalla vendita di auto</strong>, ma da una voce fumosa chiamata "Altri sussidi", descritta vagamente come pagamenti per attività quotidiane. È la prova tangibile che senza il sostegno statale i conti sarebbero molto, molto diversi.</p>
-                                
-                                <p>Ma non è solo questo, c'è un'altra anomalia, un trucco contabile. Le case automobilistiche cinesi stanno usando i loro fornitori come una banca personale, ritardano i pagamenti in un modo che non ha eguali nel resto del mondo. Vi porto un esempio:</p>
-                                
+                            <h3>Da Dove Arrivano Tutti Questi Soldi?</h3>
+                            
+                            <ul class="lista-strategie">
+                                <li><strong>Il crollo immobiliare:</strong> Dopo il crollo controllato del settore immobiliare</li>
+                                <li><strong>La disperazione:</strong> Nel tentativo di mantenere alti i tassi di crescita del PIL</li>
+                                <li><strong>I miliardi:</strong> Il Partito Comunista ha iniettato miliardi spingendo e incentivando</li>
+                                <li><strong>Il risultato:</strong> Un mostro con capacità produttiva eccessiva che sta divorando se stesso</li>
+                            </ul>
+
+                            <div class="box-warning alert-box">
+                                <h3 class="box-title">
+                                    <span class="attenzione">⚠ La Dichiarazione Shock</span>
+                                </h3>
+                                <p>La vicepresidente di BYD ha parlato, senza mezzi termini, di un <strong>bagno di sangue imminente</strong> e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori.</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2>🔹 I Numeri dell'Apocalisse</h2>
+                            
+                            <p>Pensate a questo numero: l'anno scorso in Cina c'erano <strong>129 marchi diversi</strong> che vendevano auto elettriche o ibride. 129. Secondo gli esperti, entro il 2030 di questi 129 ne sopravviveranno forse <strong>15 in totale</strong>. È un'apocalisse annunciata.</p>
+
+                            <div class="box-info highlight-box">
+                                <h3 class="box-title">La Guerra dei Prezzi Fratricida</h3>
+                                <p>Per rimanere a galla molte di queste aziende sono costrette a vendere in perdita o a svendere i propri prodotti in una guerra dei prezzi fratricida, una spirale discendente che Pechino stessa sta cercando disperatamente di fermare perché sta trascinando l'intera economia del paese verso la deflazione.</p>
+                            </div>
+
+                            <h3>📈 Il Numero di Partenza Era Ancora Più Folle</h3>
+
+                            <h4>L'Evoluzione del Settore</h4>
+                            <div class="requisiti-grid">
+                                <div class="requisito-item">
+                                    <h4>📊 Nel 2018</h4>
+                                    <p><strong>500 produttori</strong><br>
+                                    Un'intera foresta di aziende nate dal nulla grazie al piano Made in China 2025</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>📉 Oggi</h4>
+                                    <p><strong>129 marchi</strong><br>
+                                    Sopravvissuti alla prima ondata di consolidamento</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>🔮 Entro il 2030</h4>
+                                    <p><strong>15 in totale</strong><br>
+                                    Solo i più forti sopravvivranno all'apocalisse</p>
+                                </div>
+                            </div>
+
+                            <h4>Il Successo Globale</h4>
+                            <ul>
+                                <li><strong>Asia dominata:</strong> Hanno letteralmente dipinto la mappa del mondo con i loro colori</li>
+                                <li><strong>Europa conquistata:</strong> Sbarcando in forza con prezzi aggressivi</li>
+                                <li><strong>Sudamerica:</strong> Presenza massiccia in crescita</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2>🔹 L'Economia Pianificata alla Sovietica</h2>
+
+                            <p>Un recente reportaggio della <strong>Reuters</strong> ha squarciato il velo mostrando un quadro che ricorda sinisticamente l'economia pianificata dell'Unione Sovietica.</p>
+
+                            <div class="requisiti-grid">
+                                <div class="requisito-item">
+                                    <h4>🏭 Le Fabbriche</h4>
+                                    <p>Producono senza sosta, non per soddisfare una domanda reale, ma per raggiungere obiettivi imposti dall'alto dal partito</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>🚗 I Concessionari</h4>
+                                    <p>Piazzali pieni di auto invendute. Trucchi contabili: registrano auto come vendute a se stessi</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>📊 I Numeri</h4>
+                                    <p>Solo il <strong>30% dei concessionari in Cina è in attivo</strong></p>
+                                </div>
+                            </div>
+
+                            <h3>Scene Surreali</h3>
+                            <p>Immaginatevi: auto nuove di zecca che accumulano polvere mentre sulla carta risultano già vendute. Un altro artificio per gonfiare i numeri e dare un'impressione di crescita che però non esiste.</p>
+
+                            <blockquote class="quote-box">
+                                <p>Ogni governatore locale, per compiacere Pechino, ha voluto la sua fabbrica di automobili, offrendo terreni a basso costo e sussidi e creando una duplicazione folle degli investimenti.</p>
+                            </blockquote>
+
+                            <p>Hanno costruito una capacità produttiva <strong>doppia</strong> rispetto a quella che effettivamente utilizzavano ed ora si ritrovano con questo enorme eccesso che, come uno tsunami, si sta riversando sui mercati globali.</p>
+                        </section>
+
+                        <section>
+                            <h2>🔹 L'Obiettivo Strategico: Sicurezza Energetica</h2>
+                            
+                            <p>Ma non è solo una questione economica. Dietro questa spinta c'è anche un obiettivo strategico, quasi militare: <strong>la sicurezza energetica</strong>.</p>
+
+                            <div class="box-info highlight-box">
+                                <h3 class="box-title">La Strategia Geopolitica</h3>
+                                <p>La Cina è il più grande importatore di petrolio al mondo e sa bene che le rotte marittime sono controllate dagli Stati Uniti. In caso di conflitto, le sue forniture potrebbero essere tagliate.</p>
+                            </div>
+
+                            <p>E quindi inondare il mondo di auto elettriche è anche un modo per ridurre la propria dipendenza dal petrolio, una mossa da maestri sulla scacchiera geopolitica globale.</p>
+                        </section>
+
+                        <section>
+                            <h2>🔹 Il Caso BYD: I Trucchi Contabili</h2>
+
+                            <p>Ma torniamo proprio al caso di BYD. Perché se si va a leggere attentamente il suo bilancio si scopre una cosa sconcertante.</p>
+
+                            <div class="box-warning alert-box">
+                                <h3 class="box-title">
+                                    <span class="attenzione">⚠ La Verità sui Conti</span>
+                                </h3>
+                                <p><strong>Quasi un quarto del suo utile netto non deriva dalla vendita di auto</strong>, ma da una voce fumosa chiamata "Altri sussidi", descritta vagamente come pagamenti per attività quotidiane. È la prova tangibile che senza il sostegno statale i conti sarebbero molto, molto diversi.</p>
+                            </div>
+
+                            <h3>Il Trucco dei Fornitori</h3>
+
+                            <p>Ma non è solo questo, c'è un'altra anomalia, un trucco contabile. Le case automobilistiche cinesi stanno usando i loro fornitori come una banca personale, ritardano i pagamenti in un modo che non ha eguali nel resto del mondo.</p>
+
+                            <h4>Confronto Tempi di Pagamento</h4>
+                            <ul>
+                                <li><strong>Toyota/Tesla:</strong> pagano i loro fornitori in media ogni <strong>60 giorni</strong></li>
+                                <li><strong>BYD:</strong> aspettano <strong>130 giorni</strong></li>
+                                <li><strong>Altri produttori cinesi:</strong> arrivano a <strong>192 giorni</strong>, più di 6 mesi</li>
+                            </ul>
+
+                            <p>Stanno letteralmente spremendo la loro catena di approvvigionamento per finanziare le proprie operazioni. Questa non è più gestione finanziaria, è giocare a nascondino con i debiti.</p>
+
+                            <hr class="section-divider">
+
+                            <div class="leggi-anche related-content">
+                                <div>
+                                    <p class="related-label">Approfondimento →</p>
+                                    <a href="#calcolo-brividi" class="related-link">
+                                        <div class="related-image">
+                                            <img src="https://picsum.photos/211/129?random=103" alt="Analisi BYD" loading="lazy">
+                                        </div>
+                                        <div class="related-text">
+                                            <h3>Il Calcolo da Brividi sul Cash Flow di BYD</h3>
+                                            <p class="related-excerpt">Come i ritardi nei pagamenti mascherano un'emorragia di cassa</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="calcolo-brividi">
+                            <h2>🔹 Il Calcolo da Brividi</h2>
+
+                            <p>Un'analisi forense ha fatto un calcolo da brividi:</p>
+
+                            <div class="box-warning alert-box">
+                                <h3 class="box-title">
+                                    <span class="attenzione">⚠ I Numeri Reali</span>
+                                </h3>
+                                <p>Se BYD pagasse i suoi fornitori con la stessa tempistica di Tesla, il suo <strong>flusso di cassa accumulato dal 2010 non sarebbe positivo per 13,9 miliardi di dollari</strong>, ma precipiterebbe ad un valore <strong>negativo di -5,2 miliardi</strong>.</p>
+                                <p><strong>Un ribaltamento di quasi 20 miliardi di dollari</strong>, un'emorragia di cassa mascherata.</p>
+                            </div>
+
+                            <h3>Le Vendite Fantasma</h3>
+
+                            <p>E come se non bastasse, c'è il problema delle vendite fantasma. Le auto vengono registrate come vendute quando passano dalla fabbrica al concessionario, ma poi rimangono per mesi a prendere polvere nei piazzali per essere infine vendute come usato a km0.</p>
+
+                            <p>Un altro artificio per gonfiare i numeri e dare un'impressione di crescita che però non esiste.</p>
+                        </section>
+
+                        <section>
+                            <h2>🔹 La Pistola Fumante</h2>
+
+                            <p>Ma la prova più schiacciante, la pistola fumante, non viene da un'analista occidentale, viene dall'interno, viene dal cuore stesso del sistema.</p>
+
+                            <blockquote class="quote-box">
+                                <p><strong>Jack Wei, CEO di Great Wall Motors:</strong> "La Evergrande dell'industria automobilistica esiste già, solo che non è ancora esplosa."</p>
+                            </blockquote>
+
+                            <p>È una dichiarazione di una potenza devastante. Sta ammettendo che c'è già un gigante con i piedi d'argilla, proprio come accadde per la società immobiliare Evergrande, il cui fallimento è diventato il simbolo della crisi edilizia cinese.</p>
+
+                            <p>Un gigante il cui crollo potrebbe innescare una <strong>reazione a catena</strong>.</p>
+                        </section>
+
+                        <section>
+                            <h2>🔹 Cosa Significa per l'Europa</h2>
+
+                            <p>E quindi cosa significa tutto questo per noi qui in Europa?</p>
+
+                            <div class="box-info highlight-box">
+                                <h3 class="box-title">L'Inondazione Continua</h3>
+                                <p>L'inondazione di auto elettriche cinesi a basso costo non si fermerà, anzi probabilmente peggiorerà perché devono liberarsi di queste scorte a qualsiasi costo.</p>
+                            </div>
+
+                            <h3>I Dazi Europei</h3>
+
+                            <p>Anche con i dazi che l'Europa ha messo sui veicoli cinesi:</p>
+
+                            <ul>
+                                <li><strong>Dal 17% fino al 35,3%</strong> sui veicoli cinesi</li>
+                                <li><strong>+ 10%</strong> delle tariffe standard esistenti</li>
+                            </ul>
+
+                            <h3>Il Vero Rischio: Il Valore di Rivendita</h3>
+
+                            <p>Nel breve termine questo è comunque un vantaggio per chi compra, però c'è un'incognita enorme, un punto interrogativo grande come una casa: <strong>il valore di rivendita</strong>.</p>
+
+                            <div class="box-warning alert-box">
+                                <h3 class="box-title">
+                                    <span class="attenzione">⚠ La Domanda Cruciale</span>
+                                </h3>
+                                <p>Prima di comprare, quello che dovremmo domandarci è: cosa succederà al nostro scintillante affare tra 2, 3, 5 anni, quando il mercato sarà ancora più saturo e magari il marchio che avete comprato non esisterà più?</p>
+                                <p><strong>Il vostro affare di oggi potrebbe trasformarsi in un pezzo da museo senza valore domani.</strong></p>
+                            </div>
+
+                            <p>È un rischio che in pochi stanno considerando e questo ci porta al punto cruciale.</p>
+                        </section>
+
+                        <section>
+                            <h2>🔹 Le Ripercussioni Globali</h2>
+
+                            <p>Se la bolla immobiliare cinese è stata un problema interno cinese, una crisi automobilistica avrebbe <strong>ripercussioni globali</strong> perché queste auto sono sulle nostre strade.</p>
+
+                            <div class="requisiti-grid">
+                                <div class="requisito-item">
+                                    <h4>🌍 Impatto Globale</h4>
+                                    <p>Queste aziende sono attori internazionali, geopoliticamente rappresentano l'immagine della potenza manifatturiera cinese nel mondo</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>🏛️ L'Intervento di Pechino</h4>
+                                    <p>È probabile che Pechino non lascerà fallire il suo Evergrande automobilistico. Interverrà, salverà, consoliderà</p>
+                                </div>
+                                <div class="requisito-item">
+                                    <h4>⏳ Il Processo</h4>
+                                    <p>Il processo sarà lungo e sarà doloroso. Siamo probabilmente solo all'inizio</p>
+                                </div>
+                            </div>
+
+                            <p>Stiamo probabilmente solo all'inizio, nella fase in cui gli eccessi vengono a galla e il mercato inizia a separare le aziende sane da quelle che sono degli zombie economici tenuti in vita artificialmente.</p>
+                        </section>
+
+                        <section>
+                            <h2>🔹 Conclusione: La Marea si Sta Ritirando</h2>
+
+                            <blockquote class="quote-box">
+                                <p><strong>Warren Buffett:</strong> "È solo quando la marea si ritira che si scopre chi stava nuotando nudo."</p>
+                            </blockquote>
+
+                            <p><strong>Ed in Cina la marea si sta iniziando a ritirare.</strong></p>
+
+                            <div class="box-info highlight-box">
+                                <h3 class="box-title">Punti Chiave da Ricordare</h3>
                                 <ul>
-                                    <li>Mentre Toyota o Tesla pagano i loro fornitori in media ogni <strong>60 giorni</strong></li>
-                                    <li>Aziende come BYD aspettano <strong>130 giorni</strong></li>
-                                    <li>Ed altre arrivano a <strong>192 giorni</strong>, più di 6 mesi</li>
+                                    <li>Warren Buffett ha venduto tutte le sue azioni BYD dopo 15 anni</li>
+                                    <li>129 marchi oggi, solo 15 sopravvivranno entro il 2030</li>
+                                    <li>Il 30% dei concessionari in Cina è in attivo</li>
+                                    <li>BYD paga i fornitori con 130 giorni di ritardo (vs 60 di Tesla)</li>
+                                    <li>Un quarto degli utili BYD deriva da sussidi statali</li>
+                                    <li>La "Evergrande delle auto" esiste già, solo che non è ancora esplosa</li>
                                 </ul>
-                                
-                                <p>Stanno letteralmente spremendo la loro catena di approvvigionamento per finanziare le proprie operazioni. Questa non è più gestione finanziaria, è giocare a nascondino con i debiti.</p>
                             </div>
-                        </article>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Il Calcolo da Brividi</h2>
-                                <p>Un'analisi forense ha fatto un calcolo da brividi. Se BYD pagasse i suoi fornitori con la stessa tempistica di Tesla, il suo flusso di cassa accumulato dal 2010 non sarebbe positivo per 13,9 miliardi di dollari, ma precipiterebbe ad un valore negativo di -5,2 miliardi. Un ribaltamento di quasi 20 miliardi di dollari, un'emorragia di cassa mascherata.</p>
-                                
-                                <p>E come se non bastasse, c'è il problema delle vendite fantasma. Le auto vengono registrate come vendute quando passano dalla fabbrica al concessionario, ma poi rimangono per mesi a prendere polvere nei piazzali per essere infine vendute come usato a km0. Un altro artificio per gonfiare i numeri e dare un'impressione di crescita che però non esiste.</p>
-                            </div>
-                        </article>
+                            <p>Lasciatemi qui sotto un commento per dirmi qual è la vostra visione di questo settore. Grazie per essere arrivati fino alla fine di questo articolo. <strong>Buoni investimenti a tutti.</strong></p>
+                        </section>
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>La Pistola Fumante</h2>
-                                <p>Ma la prova più schiacciante, la pistola fumante, non viene da un'analista occidentale, viene dall'interno, viene dal cuore stesso del sistema. Ecco che Jack Wei, il CEO, l'amministratore delegato di un altro colosso, Great Wall Motors, in una recente intervista ha pronunciato la frase che tutti temevano:</p>
-                                
-                                <p><strong>"La Evergrande dell'industria automobilistica esiste già, solo che non è ancora esplosa."</strong></p>
-                                
-                                <p>È una dichiarazione di una potenza devastante. Sta ammettendo che c'è già un gigante con i piedi d'argilla, proprio come accadde per la società immobiliare Evergrande, il cui fallimento è diventato il simbolo della crisi edilizia cinese. Un gigante il cui crollo potrebbe innescare una reazione a catena.</p>
-                            </div>
-                        </article>
+                        <hr class="section-divider">
 
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Cosa Significa per l'Europa</h2>
-                                <p>E quindi cosa significa tutto questo per noi qui in Europa? Vedete, l'inondazione di auto elettriche cinesi a basso costo non si fermerà, anzi probabilmente peggiorerà perché devono liberarsi di queste scorte a qualsiasi costo, anche con i dazi che l'Europa ha messo sui veicoli cinesi che vanno dal <strong>17% fino al 35,3%</strong> e si aggiungono al 10% delle tariffe standard esistenti.</p>
-                                
-                                <p>Nel breve termine questo è comunque un vantaggio per chi compra, però c'è un'incognita enorme, un punto interrogativo grande come una casa: <strong>il valore di rivendita</strong>.</p>
-                                
-                                <p>Prima di comprare, quello che dovremmo domandarci è cosa succederà al nostro scintillante affare tra 2, 3, 5 anni, quando il mercato sarà ancora più saturo e magari il marchio che avete comprato non esisterà più. Il vostro affare di oggi potrebbe trasformarsi in un pezzo da museo senza valore domani.</p>
+                        <div class="share-section">
+                            <p class="share-label">Condividi questo articolo:</p>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook" aria-label="Condividi su Facebook">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                    </svg>
+                                    Facebook
+                                </a>
+                                <a href="#" class="share-btn twitter" aria-label="Condividi su Twitter">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                    </svg>
+                                    Twitter
+                                </a>
+                                <a href="#" class="share-btn linkedin" aria-label="Condividi su LinkedIn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                                <a href="#" class="share-btn whatsapp" aria-label="Condividi su WhatsApp">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                    WhatsApp
+                                </a>
+                                <a href="#" class="share-btn email" aria-label="Condividi via Email">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                    Email
+                                </a>
                             </div>
-                        </article>
-
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Le Ripercussioni Globali</h2>
-                                <p>È un rischio che in pochi stanno considerando e questo ci porta al punto cruciale. Se la bolla immobiliare cinese è stata un problema interno cinese, una crisi automobilistica avrebbe ripercussioni globali perché queste auto sono sulle nostre strade. Queste aziende sono attori internazionali, geopoliticamente rappresentano l'immagine della potenza manifatturiera cinese nel mondo.</p>
-                                
-                                <p>Per questo motivo è probabile che Pechino non lascerà fallire il suo Evergrande automobilistico. Interverrà, salverà, consoliderà, ma il processo sarà lungo e sarà doloroso.</p>
-                                
-                                <p>Stiamo probabilmente solo all'inizio, nella fase in cui gli eccessi vengono a galla e il mercato inizia a separare le aziende sane da quelle che sono degli zombie economici tenuti in vita artificialmente.</p>
-                            </div>
-                        </article>
-
-                        <article class="article-card">
-                            <div class="article-content">
-                                <h2>Conclusione: La Marea si Sta Ritirando</h2>
-                                <p>Per parafrasare proprio Warren Buffett: <em>"È solo quando la marea si ritira che si scopre chi stava nuotando nudo."</em></p>
-                                
-                                <p><strong>Ed in Cina la marea si sta iniziando a ritirare.</strong></p>
-                                
-                                <p>Lasciatemi qui sotto un commento per dirmi qual è la vostra visione di questo settore, se lo conoscete in Cina. Grazie per essere arrivati fino alla fine di questo articolo. Buoni investimenti a tutti.</p>
-                            </div>
-                        </article>
+                        </div>
 
                     </div>
+
+                </article>
+
+                <section class="comments-section">
+                    <h2 class="comments-title">💬 Commenti <span class="comment-count">(3)</span></h2>
+                    
+                    <div class="comments-list">
+                        
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <div class="comment-avatar">
+                                    <img src="https://picsum.photos/60/60?random=user1" alt="Giovanni Rossi" loading="lazy">
+                                </div>
+                                <div class="comment-info">
+                                    <h4 class="comment-author">Giovanni Rossi</h4>
+                                    <time class="comment-date" datetime="2025-10-24T10:30:00">24 ottobre 2025 alle 10:30</time>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>Analisi eccezionale Marco! Stavo proprio considerando l'acquisto di una BYD, ma dopo aver letto questo articolo ci penserò due volte. Il punto sul valore di rivendita è fondamentale.</p>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <span class="like-icon">👍</span>
+                                    <span class="like-count">12</span>
+                                </button>
+                                <button class="comment-reply">Rispondi</button>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <div class="comment-avatar">
+                                    <img src="https://picsum.photos/60/60?random=user2" alt="Maria Bianchi" loading="lazy">
+                                </div>
+                                <div class="comment-info">
+                                    <h4 class="comment-author">Maria Bianchi</h4>
+                                    <time class="comment-date" datetime="2025-10-24T11:15:00">24 ottobre 2025 alle 11:15</time>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>Il parallelo con Evergrande è inquietante. Chi avrebbe mai pensato che anche il settore auto potesse avere una bolla così grande? Warren Buffett raramente sbaglia...</p>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <span class="like-icon">👍</span>
+                                    <span class="like-count">8</span>
+                                </button>
+                                <button class="comment-reply">Rispondi</button>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <div class="comment-avatar">
+                                    <img src="https://picsum.photos/60/60?random=user3" alt="Luca Verdi" loading="lazy">
+                                </div>
+                                <div class="comment-info">
+                                    <h4 class="comment-author">Luca Verdi</h4>
+                                    <time class="comment-date" datetime="2025-10-24T14:20:00">24 ottobre 2025 alle 14:20</time>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>I numeri sui tempi di pagamento ai fornitori sono impressionanti: 192 giorni contro 60! È insostenibile. Grazie per questa analisi così approfondita.</p>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <span class="like-icon">👍</span>
+                                    <span class="like-count">15</span>
+                                </button>
+                                <button class="comment-reply">Rispondi</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="comment-form-container">
+                        <h3 class="form-title">Lascia un commento</h3>
+                        <form class="comment-form" id="commentForm">
+                            <div class="form-group">
+                                <label for="comment-name">Nome *</label>
+                                <input type="text" id="comment-name" name="name" required placeholder="Il tuo nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-email">Email * <small>(non sarà pubblicata)</small></label>
+                                <input type="email" id="comment-email" name="email" required placeholder="tua@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-text">Commento *</label>
+                                <textarea id="comment-text" name="comment" rows="5" required placeholder="Scrivi il tuo commento..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Invia Commento</button>
+                        </form>
+                    </div>
+
                 </section>
 
             </div>
 
-            <!-- SIDEBAR -->
             <aside class="sidebar-column">
                 
-                <!-- Widget Ultimi Articoli -->
-                <div class="widget widget-recent">
-                    <h3 class="widget-title">Articoli Correlati</h3>
-                    <ul class="widget-list">
-                        <li><a href="#">Il mercato cinese degli EV: guida completa</a></li>
-                        <li><a href="#">Warren Buffett e la sua strategia di uscita</a></li>
-                        <li><a href="#">Dazi europei sulle auto cinesi: effetti sul mercato</a></li>
-                        <li><a href="#">BYD: analisi finanziaria approfondita</a></li>
-                        <li><a href="#">Tesla vs. produttori cinesi: il confronto</a></li>
-                    </ul>
+                <div class="widget widget-author">
+                    <h3 class="widget-title">👤 L'Autore</h3>
+                    <div class="author-bio">
+                        <img src="https://picsum.photos/100/100?random=author" alt="Marco Casario" class="author-avatar" loading="lazy">
+                        <h4 class="author-name">Marco Casario</h4>
+                        <p class="author-role">Analista Economico</p>
+                        <p class="author-description">Esperto di mercati finanziari e analisi economica con focus particolare sui mercati asiatici.</p>
+                    </div>
                 </div>
 
-                <!-- Widget Newsletter -->
                 <div class="widget widget-newsletter">
                     <h3 class="widget-title">📧 Newsletter</h3>
                     <p>Ricevi le ultime analisi di mercato direttamente nella tua inbox</p>
@@ -275,26 +598,67 @@
                         <input type="email" placeholder="La tua email" required>
                         <button type="submit" class="btn-primary">Iscriviti</button>
                     </form>
+                    <p class="newsletter-note"><small>Niente spam, solo contenuti di qualità</small></p>
                 </div>
 
-                <!-- Widget Categorie -->
-                <div class="widget widget-categories">
-                    <h3 class="widget-title">Categorie</h3>
+                <div class="widget widget-popular">
+                    <h3 class="widget-title">📈 Articoli Popolari</h3>
                     <ul class="widget-list">
-                        <li><a href="#">Mercati Azionari</a></li>
-                        <li><a href="#">Auto Elettriche</a></li>
-                        <li><a href="#">Economia Cinese</a></li>
-                        <li><a href="#">Investimenti</a></li>
-                        <li><a href="#">Analisi Settoriali</a></li>
+                        <li>
+                            <a href="#">
+                                <span class="popular-number">1</span>
+                                Warren Buffett vende tutte le azioni BYD
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="popular-number">2</span>
+                                Il crollo di Evergrande: lezioni per gli investitori
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="popular-number">3</span>
+                                Made in China 2025: il piano strategico
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="popular-number">4</span>
+                                Dazi europei sulle auto cinesi: cosa cambia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="popular-number">5</span>
+                                Tesla vs BYD: il confronto completo
+                            </a>
+                        </li>
                     </ul>
+                </div>
+
+                <div class="widget widget-categories">
+                    <h3 class="widget-title">🗂️ Categorie</h3>
+                    <ul class="widget-list">
+                        <li><a href="#investimenti">📊 Investimenti <span class="category-count">(42)</span></a></li>
+                        <li><a href="#mercati">💰 Mercati <span class="category-count">(38)</span></a></li>
+                        <li><a href="#economia">🌍 Economia <span class="category-count">(56)</span></a></li>
+                        <li><a href="#crypto">₿ Criptovalute <span class="category-count">(29)</span></a></li>
+                        <li><a href="#trading">📈 Trading <span class="category-count">(34)</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="widget widget-ad">
+                    <p class="ad-label">Pubblicità</p>
+                    <div class="ad-placeholder">
+                        <img src="https://picsum.photos/300/250?random=ad1" alt="Pubblicità" loading="lazy">
+                    </div>
                 </div>
 
             </aside>
         </div>
-
     </main>
 
-    <!-- FOOTER -->
     <footer id="footer-principale">
         <div class="footer-container">
             <div class="footer-social">
@@ -351,7 +715,6 @@
         </div>
     </footer>
 
-    <!-- ========== JAVASCRIPT ========== -->
     <script>
         // ===== MENU MOBILE TOGGLE =====
         function toggleMenu() {
@@ -360,11 +723,16 @@
             const overlay = document.getElementById('menuOverlay');
             const body = document.body;
             
+            // Debug - verifica elementi
             if (!menu || !toggle || !overlay) {
                 console.error('❌ Elementi menu non trovati!');
+                console.log('Menu:', menu);
+                console.log('Toggle:', toggle);
+                console.log('Overlay:', overlay);
                 return;
             }
             
+            // Toggle delle classi
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
             overlay.classList.toggle('active');
@@ -372,37 +740,56 @@
             const isActive = menu.classList.contains('active');
             toggle.setAttribute('aria-expanded', isActive);
             
+            // Blocca/sblocca scroll
             body.style.overflow = isActive ? 'hidden' : '';
+            
+            console.log('🔄 Menu toggled:', isActive ? 'APERTO ✅' : 'CHIUSO ❌');
         }
 
+        // Toggle submenu mobile
         function toggleSubmenu(event) {
             if (window.innerWidth <= 768) {
                 event.preventDefault();
                 const menuItem = event.target.closest('.menu-dropdown');
                 if (menuItem) {
                     menuItem.classList.toggle('active');
+                    console.log('📂 Submenu toggled');
                 }
             }
         }
 
-        function closeMenuOnClick(event) {
-            if (window.innerWidth <= 768) {
-                setTimeout(() => {
-                    const menu = document.getElementById('mainMenu');
-                    if (menu && menu.classList.contains('active')) {
-                        toggleMenu();
-                    }
-                }, 200);
-            }
-        }
+        // Click overlay per chiudere
+        document.getElementById('menuOverlay')?.addEventListener('click', toggleMenu);
 
+        // Chiudi con ESC
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 const menu = document.getElementById('mainMenu');
                 if (menu && menu.classList.contains('active')) {
+                    console.log('⌨️ Menu chiuso con ESC');
                     toggleMenu();
                 }
             }
+        });
+
+        // Chiudi dopo click link (solo mobile)
+        document.querySelectorAll('.menu-principale a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    const menu = document.getElementById('mainMenu');
+                    if (menu && menu.classList.contains('active')) {
+                        setTimeout(toggleMenu, 200);
+                    }
+                }
+            });
+        });
+
+        // Test al caricamento
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM caricato - FinanzAI.it Ready!');
+            console.log('📱 Menu element:', document.getElementById('mainMenu') ? '✓' : '✗');
+            console.log('🍔 Toggle element:', document.getElementById('menuToggle') ? '✓' : '✗');
+            console.log('🌑 Overlay element:', document.getElementById('menuOverlay') ? '✓' : '✗');
         });
 
         // ===== SCROLL TO TOP =====
@@ -434,6 +821,56 @@
                             behavior: 'smooth'
                         });
                     }
+                }
+            });
+        });
+
+        // ===== GESTIONE COMMENTI =====
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('comment-name').value;
+            const email = document.getElementById('comment-email').value;
+            const comment = document.getElementById('comment-text').value;
+            
+            if (!name || !email || !comment) {
+                alert('Compila tutti i campi obbligatori');
+                return;
+            }
+            
+            alert('Grazie per il tuo commento, ' + name + '!\n\nIl commento è in moderazione e verrà pubblicato a breve.');
+            
+            this.reset();
+            document.querySelector('.comments-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Gestione pulsanti Reply
+        document.querySelectorAll('.comment-reply').forEach(button => {
+            button.addEventListener('click', function() {
+                const commentAuthor = this.closest('.comment-item').querySelector('.comment-author').textContent;
+                const textarea = document.getElementById('comment-text');
+                textarea.value = '@' + commentAuthor + ' ';
+                textarea.focus();
+                document.querySelector('.comment-form').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Gestione pulsanti Like
+        document.querySelectorAll('.comment-like').forEach(button => {
+            button.addEventListener('click', function() {
+                const likeCount = this.querySelector('.like-count');
+                let currentLikes = parseInt(likeCount.textContent);
+                
+                if (this.classList.contains('liked')) {
+                    this.classList.remove('liked');
+                    likeCount.textContent = currentLikes - 1;
+                } else {
+                    this.classList.add('liked');
+                    likeCount.textContent = currentLikes + 1;
+                    this.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
                 }
             });
         });
