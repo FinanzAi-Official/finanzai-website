@@ -3,269 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Bolla delle Auto Elettriche Cinesi: Un Bagno di Sangue Annunciato</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        
-        header {
-            border-bottom: 3px solid #e74c3c;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .author {
-            font-style: italic;
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-        
-        .intro {
-            font-size: 1.2em;
-            color: #e74c3c;
-            font-weight: bold;
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #fff5f5;
-            border-left: 4px solid #e74c3c;
-        }
-        
-        h2 {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        
-        .highlight {
-            background-color: #fff3cd;
-            padding: 2px 5px;
-            font-weight: bold;
-        }
-        
-        .quote {
-            font-style: italic;
-            color: #555;
-            padding: 20px;
-            margin: 30px 0;
-            background-color: #ecf0f1;
-            border-left: 5px solid #3498db;
-            font-size: 1.1em;
-        }
-        
-        .statistics {
-            background-color: #e8f5e9;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-            border-left: 5px solid #27ae60;
-        }
-        
-        .warning {
-            background-color: #ffebee;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-            border-left: 5px solid #e74c3c;
-        }
-        
-        ul {
-            margin: 20px 0;
-            padding-left: 40px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        .conclusion {
-            background-color: #f0f7ff;
-            padding: 30px;
-            margin-top: 40px;
-            border-radius: 5px;
-            border: 2px solid #3498db;
-        }
-        
-        footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #ecf0f1;
-            text-align: center;
-            color: #7f8c8d;
-        }
-    </style>
+    <meta name="robots" content="index, follow">
+    
+    <title>La Bolla delle Auto Elettriche Cinesi - FinanzAI.it</title>
+    <meta name="description" content="L'Evergrande dell'industria automobilistica elettrica cinese esiste già: analisi del settore auto elettriche in Cina e le sue ripercussioni globali.">
+    
+    <link rel="canonical" href="https://www.finanzai.it/bolla-auto-elettriche-cina">
+    
+    <meta property="og:title" content="La Bolla delle Auto Elettriche Cinesi: Un Bagno di Sangue Annunciato">
+    <meta property="og:description" content="Warren Buffett ha venduto tutte le sue azioni BYD. Cosa sta succedendo nel mercato delle auto elettriche cinesi?">
+    <meta property="og:type" content="article">
+    
+    <link rel="stylesheet" href="finanzai-style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>La Bolla delle Auto Elettriche Cinesi: Un Bagno di Sangue Annunciato</h1>
-            <p class="author">di Marco Casario</p>
-        </header>
 
-        <div class="intro">
-            La "Evergrande" delle auto elettriche cinesi esiste già, solo che non è ancora esplosa. A dirlo non è un analista qualunque, ma l'amministratore delegato di un colosso delle auto cinesi. E quando uno come lui parla, bisogna stare ad ascoltare.
+<body class="homepage">
+    
+    <a id="button-top" class="scroll-top" href="#top" aria-label="Torna su"></a>
+    
+    <!-- Overlay scuro per menu mobile -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    
+    <header id="header-principale" class="sticky-header">
+        <div class="container-header">
+            <!-- Hamburger menu (sinistra) -->
+            <button class="mobile-menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger-icon"></span>
+            </button>
+            
+            <!-- Logo (centro su mobile) -->
+            <div id="logo">
+                <a href="homemoney.html" aria-label="FinanzAI Homepage">
+                    <h1>FinanzAI.it</h1>
+                    <p><em>Economia, Finanza e Trading</em></p>
+                </a>
+            </div>
+            
+            <!-- Navigazione -->
+            <nav role="navigation" aria-label="Menu principale">
+                <ul class="menu-principale" id="mainMenu">
+                    <li><a href="#" class="menu-link" onclick="closeMenuOnClick(event)">Home</a></li>
+                    <li><a href="#investimenti" class="menu-link" onclick="closeMenuOnClick(event)">Investimenti</a></li>
+                    <li><a href="#mercati" class="menu-link" onclick="closeMenuOnClick(event)">Mercati</a></li>
+                    <li class="menu-dropdown">
+                        <a href="#guide" class="menu-link" onclick="toggleSubmenu(event)">
+                            Guide <span class="arrow-down">▼</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#trading" onclick="closeMenuOnClick(event)">Trading</a></li>
+                            <li><a href="#crypto" onclick="closeMenuOnClick(event)">Criptovalute</a></li>
+                            <li><a href="#etf" onclick="closeMenuOnClick(event)">ETF</a></li>
+                            <li><a href="#azioni" onclick="closeMenuOnClick(event)">Azioni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#economia" class="menu-link" onclick="closeMenuOnClick(event)">Economia</a></li>
+                    <li><a href="#tools" class="menu-link" onclick="closeMenuOnClick(event)">Strumenti</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <article>
-            <h2>Il Segnale di Warren Buffett</h2>
-            <p>
-                Per capire cosa sta davvero accadendo, dobbiamo partire da un segnale silenzioso lanciato dall'oracolo di Omaha, Warren Buffett. Per 15 anni ha tenuto in portafoglio il gioiello della corona cinese BYD, cavalcando l'onda perfetta dell'ascesa dell'elettrico e soprattutto la marea dei sussidi che il Partito Comunista cinese ha riversato sul settore. Un investimento leggendario con profitti stratosferici.
-            </p>
-            <p>
-                Poi un giorno, senza dire una parola, inizia a vendere. Non un po', tutto, fino all'ultima azione. Buffett non è uno che gioca d'azzardo, lui guarda al futuro. Se dopo aver cavalcato un'onda per 15 anni all'improvviso salta giù dalla tavola, significa che ha visto lo scoglio, anzi ha visto lo tsunami. Non vede più margini di sicurezza, non vede più potenziale. Ha visto il rischio, e quando Warren Buffett vede il rischio, scappa.
-            </p>
+    <div class="hero-homepage" id="top">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="https://picsum.photos/1920/450?random=100" type="image/jpeg">
+            <source media="(min-width: 768px)" srcset="https://picsum.photos/1024/350?random=100" type="image/jpeg">
+            <img src="https://picsum.photos/768/250?random=100" alt="Auto elettriche cinesi" class="hero-image" loading="eager">
+        </picture>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2 class="hero-title">La Bolla delle Auto Elettriche Cinesi</h2>
+                <p class="hero-subtitle">Un'analisi approfondita di Marco Casario</p>
+            </div>
+        </div>
+    </div>
 
-            <h2>Una Gigantesca Sbornia Industriale</h2>
-            <p>
-                C'è una gigantesca sbornia industriale dopo una festa selvaggia, dopo una festa drogata con fiumi di denaro pubblico. Un castello di carte costruito su pratiche insostenibili che si sta sgretolando. La situazione è talmente grave che uno dei più importanti amministratori delegati del settore in Cina ha appena lanciato un allarme che ha il suono di una sentenza: <span class="highlight">ha definito l'elettrico un "bagno di sangue"</span> e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori di auto elettriche.
-            </p>
-            <p>
-                Questa volta, a differenza della bolla immobiliare le cui macerie sono rimaste confinate in Cina, le conseguenze di un crollo automobilistico si riverserebbero come uno tsunami su tutto il mondo, Italia compresa. Perché questa intera industria non si regge in piedi da sola: è collegata ad una macchina a cuore-polmone che pompa ossigeno artificiale nelle sue vene giorno e notte. E questa macchina sono i sussidi, gli aiuti di stato e i crediti di imposta.
-            </p>
+    <main id="main-content" class="container-main">
+        
+        <!-- SEZIONE ARTICOLO PRINCIPALE -->
+        <section class="featured-section">
+            
+            <div class="featured-grid">
+                <!-- Articolo principale -->
+                <article class="article-card article-featured">
+                    <div class="article-content">
+                        <h3 class="article-title">La "Evergrande" delle Auto Elettriche Esiste Già</h3>
+                        <p class="article-excerpt">Il canarino nella miniera di carbone ha smesso di cantare. Una frase buttata lì quasi per caso durante un'intervista ha gelato il sangue degli investitori: "La bolla delle macchine elettriche cinesi esiste già, solo che non è ancora esplosa."</p>
+                        <div class="article-meta">
+                            <span class="article-author">Di Marco Casario</span>
+                            <span class="separator">•</span>
+                            <time datetime="2025-10-24">24 ottobre 2025</time>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <div class="quote">
-                "Staccate la spina di questa macchina e tutto si ferma. Un colpo secco, silenzio, linea piatta."
+        <hr class="section-divider">
+
+        <!-- LAYOUT A DUE COLONNE -->
+        <div class="layout-grid">
+            <div class="main-column">
+                
+                <!-- CONTENUTO ARTICOLO -->
+                <section class="news-section">
+                    
+                    <div class="articles-list">
+                        
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Il Segnale di Warren Buffett</h2>
+                                <p>Per capire cosa sta davvero accadendo, dobbiamo partire da un segnale silenzioso lanciato dall'oracolo di Omaha, Warren Buffett. Immaginatevelo: per 15 anni ha tenuto in portafoglio il gioiello della corona cinese BYD. Ha cavalcato l'onda perfetta, l'ascesa dell'elettrico e soprattutto la marea dei sussidi che il Partito Comunista cinese ha riversato sul settore. Un investimento leggendario con profitti stratosferici.</p>
+                                
+                                <p>Poi un giorno, senza dire una parola, inizia a vendere. Non un po', tutto, fino all'ultima azione. Vedete, Buffett non è uno che gioca d'azzardo, lui guarda al futuro. E se dopo aver cavalcato un'onda per 15 anni all'improvviso salta giù dalla tavola, significa che ha visto lo scoglio, anzi ha visto lo tsunami. Non vede più margini di sicurezza, non vede più potenziale, ha visto il rischio. E quando Warren Buffett vede il rischio, scappa.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Una Gigantesca Sbornia Industriale</h2>
+                                <p>Salve a tutti, Marco Casario qui. C'è una gigantesca sbornia industriale dopo una festa selvaggia, dopo una festa drogata con fiumi di denaro pubblico. Un castello di carte costruito su pratiche insostenibili che si sta sgretolando.</p>
+                                
+                                <p>La situazione è talmente grave che uno dei più importanti amministratori delegati del settore in Cina ha appena lanciato un allarme che ha il suono di una sentenza: ha definito l'elettrico un "bagno di sangue" e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori di auto elettriche.</p>
+                                
+                                <p>E questa volta, a differenza della bolla immobiliare le cui macerie sono rimaste confinate in Cina, le conseguenze di un crollo automobilistico si riverserebbero come uno tsunami su tutto il mondo, Italia compresa. Perché vedete, questa intera industria non si regge in piedi da sola: è collegata ad una macchina, una macchina a cuore polmone che pompa ossigeno artificiale nelle sue vene di giorno e di notte. E questa macchina sono i sussidi, gli aiuti di stato e i crediti di imposta.</p>
+                                
+                                <p><strong>Staccate la spina di questa macchina e tutto si ferma. Un colpo secco, silenzio, linea piatta.</strong></p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Il Mostro Creato dal Partito Comunista</h2>
+                                <p>Ma da dove arrivano tutti questi soldi? Vedete, dopo il crollo controllato del settore immobiliare, il Partito Comunista cinese, nel disperato tentativo di mantenere alti i tassi di crescita del prodotto interno lordo, ha iniettato miliardi spingendo, incentivando e creando un mostro con una capacità produttiva talmente eccessiva da non poter essere assorbita né dalla Cina né dal resto del mondo. Ed ora il mostro sta iniziando a divorare se stesso.</p>
+                                
+                                <p>La scintilla che ha acceso questo campanello d'allarme è stata la dichiarazione passata quasi in sordina, ma che per chi sa leggere tra le righe è suonata come una sirena d'allarme in piena notte. La stessa vicepresidente di BYD, il colosso che sta conquistando il mondo, ha parlato, senza mezzi termini, di un bagno di sangue imminente e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori.</p>
+                                
+                                <p>Pensate a questo numero: l'anno scorso in Cina c'erano <strong>129 marchi diversi</strong> che vendevano auto elettriche o ibride. 129. Secondo gli esperti, entro il 2030 di questi 129 ne sopravviveranno forse <strong>15 in totale</strong>. È un'apocalisse annunciata.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>La Guerra dei Prezzi Fratricida</h2>
+                                <p>E la cosa ancora più surreale è che per rimanere a galla molte di queste aziende sono costrette a vendere in perdita o a svendere i propri prodotti in una guerra dei prezzi fratricida, una spirale discendente che Pechino stessa sta cercando disperatamente di fermare perché sta trascinando l'intera economia del paese verso la deflazione. E questa non è un'ipotesi, è una realtà che sta già accadendo oggi.</p>
+                                
+                                <p>Se guardiamo indietro scopriamo che il numero di partenza era ancora più folle. Nel 2018 esistevano <strong>500 produttori</strong> di veicoli elettrici in Cina, 500. Un'intera foresta di aziende nate dal nulla grazie al grande piano made in China 2025, un progetto con cui Xi Jinping voleva trasformare la Cina nel leader tecnologico mondiale. E per certi versi ci sono riusciti. Hanno letteralmente dipinto la mappa del mondo con i loro colori, dominando non solo in Asia, ma sbarcando in forza in Europa e Sudamerica.</p>
+                                
+                                <p>Ma a quale costo?</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>L'Economia Pianificata alla Sovietica</h2>
+                                <p>Un recente reportaggio della Reuters ha squarciato il velo mostrando un quadro che ricorda sinisticamente l'economia pianificata dell'Unione Sovietica: fabbriche che producono senza sosta, non per soddisfare una domanda reale, ma per raggiungere obiettivi imposti dall'alto dal partito. Concessionari con i piazzali talmente pieni di auto invendute da dover ricorrere a trucchi contabili, registrando le auto come vendute a se stessi, solo per incassare i bonus dalle case madri.</p>
+                                
+                                <p>Immaginatevi scene surreali: auto nuove di zecca che accumulano polvere mentre sulla carta risultano già vendute. Solo il <strong>30% dei concessionari in Cina è in attivo</strong>.</p>
+                                
+                                <p>E perché questa ossessione per la produzione e la vendita? Perché ogni governatore locale, per compiacere Pechino, ha voluto la sua fabbrica di automobili, offrendo terreni a basso costo e sussidi e creando una duplicazione folle degli investimenti. Hanno costruito una capacità produttiva doppia rispetto a quella che effettivamente utilizzavano ed ora si ritrovano con questo enorme eccesso che, come uno tsunami, si sta riversando sui mercati globali.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>L'Obiettivo Strategico: Sicurezza Energetica</h2>
+                                <p>Ma non è solo una questione economica. Dietro questa spinta c'è anche un obiettivo strategico, quasi militare: la sicurezza energetica. La Cina è il più grande importatore di petrolio al mondo e sa bene che le rotte marittime sono controllate dagli Stati Uniti. In caso di conflitto, le sue forniture potrebbero essere tagliate.</p>
+                                
+                                <p>E quindi inondare il mondo di auto elettriche è anche un modo per ridurre la propria dipendenza dal petrolio, una mossa da maestri sulla scacchiera geopolitica globale.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Il Caso BYD: I Trucchi Contabili</h2>
+                                <p>Ma torniamo proprio al caso di BYD. Perché se si va a leggere attentamente il suo bilancio si scopre una cosa sconcertante. <strong>Quasi un quarto del suo utile netto non deriva dalla vendita di auto</strong>, ma da una voce fumosa chiamata "Altri sussidi", descritta vagamente come pagamenti per attività quotidiane. È la prova tangibile che senza il sostegno statale i conti sarebbero molto, molto diversi.</p>
+                                
+                                <p>Ma non è solo questo, c'è un'altra anomalia, un trucco contabile. Le case automobilistiche cinesi stanno usando i loro fornitori come una banca personale, ritardano i pagamenti in un modo che non ha eguali nel resto del mondo. Vi porto un esempio:</p>
+                                
+                                <ul>
+                                    <li>Mentre Toyota o Tesla pagano i loro fornitori in media ogni <strong>60 giorni</strong></li>
+                                    <li>Aziende come BYD aspettano <strong>130 giorni</strong></li>
+                                    <li>Ed altre arrivano a <strong>192 giorni</strong>, più di 6 mesi</li>
+                                </ul>
+                                
+                                <p>Stanno letteralmente spremendo la loro catena di approvvigionamento per finanziare le proprie operazioni. Questa non è più gestione finanziaria, è giocare a nascondino con i debiti.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Il Calcolo da Brividi</h2>
+                                <p>Un'analisi forense ha fatto un calcolo da brividi. Se BYD pagasse i suoi fornitori con la stessa tempistica di Tesla, il suo flusso di cassa accumulato dal 2010 non sarebbe positivo per 13,9 miliardi di dollari, ma precipiterebbe ad un valore negativo di -5,2 miliardi. Un ribaltamento di quasi 20 miliardi di dollari, un'emorragia di cassa mascherata.</p>
+                                
+                                <p>E come se non bastasse, c'è il problema delle vendite fantasma. Le auto vengono registrate come vendute quando passano dalla fabbrica al concessionario, ma poi rimangono per mesi a prendere polvere nei piazzali per essere infine vendute come usato a km0. Un altro artificio per gonfiare i numeri e dare un'impressione di crescita che però non esiste.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>La Pistola Fumante</h2>
+                                <p>Ma la prova più schiacciante, la pistola fumante, non viene da un'analista occidentale, viene dall'interno, viene dal cuore stesso del sistema. Ecco che Jack Wei, il CEO, l'amministratore delegato di un altro colosso, Great Wall Motors, in una recente intervista ha pronunciato la frase che tutti temevano:</p>
+                                
+                                <p><strong>"La Evergrande dell'industria automobilistica esiste già, solo che non è ancora esplosa."</strong></p>
+                                
+                                <p>È una dichiarazione di una potenza devastante. Sta ammettendo che c'è già un gigante con i piedi d'argilla, proprio come accadde per la società immobiliare Evergrande, il cui fallimento è diventato il simbolo della crisi edilizia cinese. Un gigante il cui crollo potrebbe innescare una reazione a catena.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Cosa Significa per l'Europa</h2>
+                                <p>E quindi cosa significa tutto questo per noi qui in Europa? Vedete, l'inondazione di auto elettriche cinesi a basso costo non si fermerà, anzi probabilmente peggiorerà perché devono liberarsi di queste scorte a qualsiasi costo, anche con i dazi che l'Europa ha messo sui veicoli cinesi che vanno dal <strong>17% fino al 35,3%</strong> e si aggiungono al 10% delle tariffe standard esistenti.</p>
+                                
+                                <p>Nel breve termine questo è comunque un vantaggio per chi compra, però c'è un'incognita enorme, un punto interrogativo grande come una casa: <strong>il valore di rivendita</strong>.</p>
+                                
+                                <p>Prima di comprare, quello che dovremmo domandarci è cosa succederà al nostro scintillante affare tra 2, 3, 5 anni, quando il mercato sarà ancora più saturo e magari il marchio che avete comprato non esisterà più. Il vostro affare di oggi potrebbe trasformarsi in un pezzo da museo senza valore domani.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Le Ripercussioni Globali</h2>
+                                <p>È un rischio che in pochi stanno considerando e questo ci porta al punto cruciale. Se la bolla immobiliare cinese è stata un problema interno cinese, una crisi automobilistica avrebbe ripercussioni globali perché queste auto sono sulle nostre strade. Queste aziende sono attori internazionali, geopoliticamente rappresentano l'immagine della potenza manifatturiera cinese nel mondo.</p>
+                                
+                                <p>Per questo motivo è probabile che Pechino non lascerà fallire il suo Evergrande automobilistico. Interverrà, salverà, consoliderà, ma il processo sarà lungo e sarà doloroso.</p>
+                                
+                                <p>Stiamo probabilmente solo all'inizio, nella fase in cui gli eccessi vengono a galla e il mercato inizia a separare le aziende sane da quelle che sono degli zombie economici tenuti in vita artificialmente.</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-content">
+                                <h2>Conclusione: La Marea si Sta Ritirando</h2>
+                                <p>Per parafrasare proprio Warren Buffett: <em>"È solo quando la marea si ritira che si scopre chi stava nuotando nudo."</em></p>
+                                
+                                <p><strong>Ed in Cina la marea si sta iniziando a ritirare.</strong></p>
+                                
+                                <p>Lasciatemi qui sotto un commento per dirmi qual è la vostra visione di questo settore, se lo conoscete in Cina. Grazie per essere arrivati fino alla fine di questo articolo. Buoni investimenti a tutti.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
             </div>
 
-            <h2>Il Mostro Creato dal Partito Comunista</h2>
-            <p>
-                Da dove arrivano tutti questi soldi? Dopo il crollo controllato del settore immobiliare, il Partito Comunista cinese, nel disperato tentativo di mantenere alti i tassi di crescita del PIL, ha iniettato miliardi spingendo, incentivando e creando un mostro con una capacità produttiva talmente eccessiva da non poter essere assorbita né dalla Cina né dal resto del mondo. Ed ora il mostro sta iniziando a divorare se stesso.
-            </p>
+            <!-- SIDEBAR -->
+            <aside class="sidebar-column">
+                
+                <!-- Widget Ultimi Articoli -->
+                <div class="widget widget-recent">
+                    <h3 class="widget-title">Articoli Correlati</h3>
+                    <ul class="widget-list">
+                        <li><a href="#">Il mercato cinese degli EV: guida completa</a></li>
+                        <li><a href="#">Warren Buffett e la sua strategia di uscita</a></li>
+                        <li><a href="#">Dazi europei sulle auto cinesi: effetti sul mercato</a></li>
+                        <li><a href="#">BYD: analisi finanziaria approfondita</a></li>
+                        <li><a href="#">Tesla vs. produttori cinesi: il confronto</a></li>
+                    </ul>
+                </div>
 
-            <div class="statistics">
-                <h3>I Numeri dell'Apocalisse Annunciata</h3>
+                <!-- Widget Newsletter -->
+                <div class="widget widget-newsletter">
+                    <h3 class="widget-title">📧 Newsletter</h3>
+                    <p>Ricevi le ultime analisi di mercato direttamente nella tua inbox</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email" required>
+                        <button type="submit" class="btn-primary">Iscriviti</button>
+                    </form>
+                </div>
+
+                <!-- Widget Categorie -->
+                <div class="widget widget-categories">
+                    <h3 class="widget-title">Categorie</h3>
+                    <ul class="widget-list">
+                        <li><a href="#">Mercati Azionari</a></li>
+                        <li><a href="#">Auto Elettriche</a></li>
+                        <li><a href="#">Economia Cinese</a></li>
+                        <li><a href="#">Investimenti</a></li>
+                        <li><a href="#">Analisi Settoriali</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer-principale">
+        <div class="footer-container">
+            <div class="footer-social">
+                <h3>Seguici</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p class="footer-description">
+                    FinanzAI.it è il portale di riferimento per investitori consapevoli. Guide pratiche, analisi approfondite e notizie in tempo reale per far crescere il tuo patrimonio.
+                </p>
+            </div>
+
+            <div class="footer-links">
                 <ul>
-                    <li><strong>129 marchi diversi</strong> vendevano auto elettriche o ibride in Cina l'anno scorso</li>
-                    <li>Entro il 2030, ne sopravviveranno forse <strong>solo 15 in totale</strong></li>
-                    <li>Nel 2018 esistevano <strong>500 produttori</strong> di veicoli elettrici in Cina</li>
-                    <li>Solo il <strong>30% dei concessionari</strong> in Cina è in attivo</li>
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#redazione">Redazione</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#pubblicita">Pubblicità</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#cookie">Cookie</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </div>
 
-            <h2>Il Caso BYD: La Verità Dietro i Numeri</h2>
-            <p>
-                La scintilla che ha acceso questo campanello d'allarme è stata la dichiarazione della stessa vicepresidente di BYD, il colosso che sta conquistando il mondo. Ha parlato, senza mezzi termini, di un bagno di sangue imminente e ha predetto che il mercato dovrà eliminare la maggior parte dei produttori.
-            </p>
-            <p>
-                La cosa ancora più surreale è che per rimanere a galla molte di queste aziende sono costrette a vendere in perdita o a svendere i propri prodotti in una guerra dei prezzi fratricida, una spirale discendente che Pechino stessa sta cercando disperatamente di fermare perché sta trascinando l'intera economia del paese verso la deflazione.
-            </p>
+            <hr class="footer-divider">
 
-            <div class="warning">
-                <h3>I Trucchi Contabili</h3>
-                <p>
-                    Se si va a leggere attentamente il bilancio di BYD, si scopre una cosa sconcertante: <strong>quasi un quarto del suo utile netto non deriva dalla vendita di auto</strong>, ma da una voce fumosa chiamata "Altri sussidi", descritta vagamente come pagamenti per attività quotidiane. È la prova tangibile che senza il sostegno statale i conti sarebbero molto, molto diversi.
+            <div class="footer-bottom">
+                <p class="copyright">
+                    <small>© 2025 FinanzAI.it - Tutti i diritti riservati | Le informazioni pubblicate non costituiscono consulenza finanziaria</small>
                 </p>
             </div>
+        </div>
+    </footer>
 
-            <h2>Il Trucco dei Fornitori</h2>
-            <p>
-                C'è un'altra anomalia, un trucco contabile. Le case automobilistiche cinesi stanno usando i loro fornitori come una banca personale, ritardando i pagamenti in un modo che non ha eguali nel resto del mondo:
-            </p>
-            <ul>
-                <li>Toyota o Tesla pagano i loro fornitori in media ogni <strong>60 giorni</strong></li>
-                <li>BYD aspetta <strong>130 giorni</strong></li>
-                <li>Altre aziende arrivano a <strong>192 giorni</strong>, più di 6 mesi</li>
-            </ul>
-            <p>
-                Stanno letteralmente spremendo la loro catena di approvvigionamento per finanziare le proprie operazioni. Questa non è più gestione finanziaria, è giocare a nascondino con i debiti.
-            </p>
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // ===== MENU MOBILE TOGGLE =====
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            const toggle = document.getElementById('menuToggle');
+            const overlay = document.getElementById('menuOverlay');
+            const body = document.body;
+            
+            if (!menu || !toggle || !overlay) {
+                console.error('❌ Elementi menu non trovati!');
+                return;
+            }
+            
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            const isActive = menu.classList.contains('active');
+            toggle.setAttribute('aria-expanded', isActive);
+            
+            body.style.overflow = isActive ? 'hidden' : '';
+        }
 
-            <div class="statistics">
-                <h3>Il Calcolo da Brividi</h3>
-                <p>
-                    Un'analisi forense ha rivelato che <strong>se BYD pagasse i suoi fornitori con la stessa tempistica di Tesla, il suo flusso di cassa accumulato dal 2010 non sarebbe positivo per 13,9 miliardi di dollari, ma precipiterebbe ad un valore negativo di -5,2 miliardi</strong>. Un ribaltamento di quasi 20 miliardi di dollari, un'emorragia di cassa mascherata.
-                </p>
-            </div>
+        function toggleSubmenu(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const menuItem = event.target.closest('.menu-dropdown');
+                if (menuItem) {
+                    menuItem.classList.toggle('active');
+                }
+            }
+        }
 
-            <h2>Le Vendite Fantasma</h2>
-            <p>
-                Come se non bastasse, c'è il problema delle vendite fantasma. Le auto vengono registrate come vendute quando passano dalla fabbrica al concessionario, ma poi rimangono per mesi a prendere polvere nei piazzali per essere infine vendute come usato a km0. Un altro artificio per gonfiare i numeri e dare un'impressione di crescita che però non esiste.
-            </p>
-            <p>
-                Un recente reportaggio della Reuters ha squarciato il velo mostrando un quadro che ricorda sinisticamente l'economia pianificata dell'Unione Sovietica: fabbriche che producono senza sosta, non per soddisfare una domanda reale, ma per raggiungere obiettivi imposti dall'alto dal partito.
-            </p>
+        function closeMenuOnClick(event) {
+            if (window.innerWidth <= 768) {
+                setTimeout(() => {
+                    const menu = document.getElementById('mainMenu');
+                    if (menu && menu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                }, 200);
+            }
+        }
 
-            <h2>La Pistola Fumante</h2>
-            <div class="quote">
-                "La Evergrande dell'industria automobilistica esiste già, solo che non è ancora esplosa."
-                <br><br>
-                — Jack Wei, CEO di Great Wall Motors
-            </div>
-            <p>
-                Questa dichiarazione viene dall'interno, dal cuore stesso del sistema. È una dichiarazione di una potenza devastante. Sta ammettendo che c'è già un gigante con i piedi d'argilla, proprio come accadde per la società immobiliare Evergrande, il cui fallimento è diventato il simbolo della crisi edilizia cinese. Un gigante il cui crollo potrebbe innescare una reazione a catena.
-            </p>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mainMenu');
+                if (menu && menu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            }
+        });
 
-            <h2>L'Obiettivo Strategico</h2>
-            <p>
-                Ma non è solo una questione economica. Dietro questa spinta c'è anche un obiettivo strategico, quasi militare: la sicurezza energetica. La Cina è il più grande importatore di petrolio al mondo e sa bene che le rotte marittime sono controllate dagli Stati Uniti. In caso di conflitto, le sue forniture potrebbero essere tagliate. Quindi inondare il mondo di auto elettriche è anche un modo per ridurre la propria dipendenza dal petrolio, una mossa da maestri sulla scacchiera geopolitica globale.
-            </p>
+        // ===== SCROLL TO TOP =====
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('button-top');
+            if (scrollBtn) {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            }
+        });
 
-            <h2>Cosa Significa per l'Europa</h2>
-            <p>
-                L'inondazione di auto elettriche cinesi a basso costo non si fermerà, anzi probabilmente peggiorerà perché devono liberarsi di queste scorte a qualsiasi costo, anche con i dazi che l'Europa ha messo sui veicoli cinesi che vanno dal 17% fino al 35,3% e si aggiungono al 10% delle tariffe standard esistenti.
-            </p>
-            <p>
-                Nel breve termine questo è comunque un vantaggio per chi compra, però c'è un'incognita enorme: <strong>il valore di rivendita</strong>. Prima di comprare, quello che dovremmo domandarci è cosa succederà al nostro scintillante affare tra 2, 3, 5 anni, quando il mercato sarà ancora più saturo e magari il marchio che avete comprato non esisterà più. Il vostro affare di oggi potrebbe trasformarsi in un pezzo da museo senza valore domani.
-            </p>
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#top') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 120;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 
-            <div class="warning">
-                <h3>Il Rischio Ignorato</h3>
-                <p>
-                    È un rischio che in pochi stanno considerando. Se la bolla immobiliare cinese è stata un problema interno cinese, una crisi automobilistica avrebbe ripercussioni globali perché queste auto sono sulle nostre strade. Queste aziende sono attori internazionali, geopoliticamente rappresentano l'immagine della potenza manifatturiera cinese nel mondo.
-                </p>
-            </div>
-
-            <div class="conclusion">
-                <h2>Conclusione: La Marea si Sta Ritirando</h2>
-                <p>
-                    Per questo motivo è probabile che Pechino non lascerà fallire il suo Evergrande automobilistico. Interverrà, salverà, consoliderà, ma il processo sarà lungo e sarà doloroso. Stiamo probabilmente solo all'inizio, nella fase in cui gli eccessi vengono a galla e il mercato inizia a separare le aziende sane da quelle che sono degli zombie economici tenuti in vita artificialmente.
-                </p>
-                <p>
-                    Per parafrasare proprio Warren Buffett: <em>"È solo quando la marea si ritira che si scopre chi stava nuotando nudo."</em>
-                </p>
-                <p>
-                    <strong>Ed in Cina la marea si sta iniziando a ritirare.</strong>
-                </p>
-            </div>
-        </article>
-
-        <footer>
-            <p>&copy; 2025 Marco Casario - Analisi Economica e Investimenti</p>
-            <p>Articolo basato sul video originale</p>
-        </footer>
-    </div>
 </body>
 </html>
