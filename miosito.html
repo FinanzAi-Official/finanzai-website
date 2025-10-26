@@ -14,7 +14,7 @@
     <meta property="og:description" content="Trade War + USD forte: risk-off in Europa, oro sostenuto. Azione sul primo break USA.">
     <meta property="og:type" content="article">
     
-    <link rel="stylesheet" href="miosito.css">
+    <link rel="stylesheet" href="miosito3.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <a id="button-top" class="scroll-top" href="#top" aria-label="Torna su"></a>
     
     <!-- Overlay scuro per menu mobile -->
-    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
     
     <header id="header-principale" class="sticky-header">
         <div class="container-header">
@@ -46,22 +46,22 @@
             <!-- Navigazione -->
             <nav role="navigation" aria-label="Menu principale">
                 <ul class="menu-principale" id="mainMenu">
-                    <li><a href="miosito2.html" class="menu-link">Home</a></li>
-                    <li><a href="#investimenti" class="menu-link">Investimenti</a></li>
-                    <li><a href="#mercati" class="menu-link">Mercati</a></li>
+                    <li><a href="#" class="menu-link" onclick="closeMenuOnClick(event)">Home</a></li>
+                    <li><a href="#investimenti" class="menu-link" onclick="closeMenuOnClick(event)">Investimenti</a></li>
+                    <li><a href="#mercati" class="menu-link" onclick="closeMenuOnClick(event)">Mercati</a></li>
                     <li class="menu-dropdown">
                         <a href="#guide" class="menu-link" onclick="toggleSubmenu(event)">
                             Guide <span class="arrow-down">▼</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#trading">Trading</a></li>
-                            <li><a href="#crypto">Criptovalute</a></li>
-                            <li><a href="#etf">ETF</a></li>
-                            <li><a href="#azioni">Azioni</a></li>
+                            <li><a href="#trading" onclick="closeMenuOnClick(event)">Trading</a></li>
+                            <li><a href="#crypto" onclick="closeMenuOnClick(event)">Criptovalute</a></li>
+                            <li><a href="#etf" onclick="closeMenuOnClick(event)">ETF</a></li>
+                            <li><a href="#azioni" onclick="closeMenuOnClick(event)">Azioni</a></li>
                         </ul>
                     </li>
-                    <li><a href="#economia" class="menu-link">Economia</a></li>
-                    <li><a href="#tools" class="menu-link">Strumenti</a></li>
+                    <li><a href="#economia" class="menu-link" onclick="closeMenuOnClick(event)">Economia</a></li>
+                    <li><a href="#tools" class="menu-link" onclick="closeMenuOnClick(event)">Strumenti</a></li>
                 </ul>
             </nav>
         </div>
@@ -754,6 +754,18 @@
                     menuItem.classList.toggle('active');
                     console.log('📂 Submenu toggled');
                 }
+            }
+        }
+
+        // Chiudi menu dopo click su link (solo mobile)
+        function closeMenuOnClick(event) {
+            if (window.innerWidth <= 768) {
+                setTimeout(() => {
+                    const menu = document.getElementById('mainMenu');
+                    if (menu && menu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                }, 200);
             }
         }
 
