@@ -373,17 +373,28 @@ nav ul.menu-principale li a:hover,
 }
 
 /* Animazione X quando attivo */
+
+/* Posiziona la X in alto a destra quando il menu è attivo */
+.mobile-menu-toggle.active {
+    position: fixed;
+    top: 10px;
+    right: 150px;
+    left: auto;
+    padding: 12px;
+}
 .mobile-menu-toggle.active .hamburger-icon {
     background: transparent;
 }
 
 .mobile-menu-toggle.active .hamburger-icon::before {
+    width: 28px;
     transform: rotate(45deg);
     top: 0;
 }
 
 .mobile-menu-toggle.active .hamburger-icon::after {
     transform: rotate(-45deg);
+    width: 28px;
     top: 0;
 }
 
