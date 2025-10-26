@@ -40,8 +40,8 @@
     --bg-sidebar: #fafafa;
     
     /* Dimensioni */
-    --max-width: 1140px;
-    --content-width: 720px;
+    --max-width: 1200px;
+    --content-width: 724px;
     --header-height: 80px;
     
     /* Spacing generoso per respirare */
@@ -241,7 +241,7 @@ nav {
 nav ul.menu-principale {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 16px;
     margin: 0;
     padding: 0;
 }
@@ -539,7 +539,7 @@ main,
 
 @media (min-width: 1024px) {
     .layout-grid {
-        grid-template-columns: 2.5fr 1fr;
+        grid-template-columns:  1fr;
         gap: var(--spacing-3xl);
     }
 }
@@ -1653,10 +1653,7 @@ a:focus-visible {
 }
 
 /* ========== RESPONSIVE MEDIA QUERIES ========== */
-body {
-        padding-top: 0;
-    }
-
+@media (max-width: 768px) {
     #header-principale,
     header {
         padding: 12px 16px;
@@ -1667,7 +1664,6 @@ body {
         align-items: center;
         justify-content: space-between;
         position: relative;
-        gap: var(--spacing-sm);
     }
     
     .mobile-menu-toggle {
@@ -1740,7 +1736,7 @@ body {
     
     .menu-link,
     .menu-principale li a,
-    .menu-items li a {
+    .menu-link {
         display: block;
         padding: 16px 24px;
         width: 100%;
@@ -1772,6 +1768,10 @@ body {
         font-size: 14px;
     }
     
+    
+    .arrow-down {
+        right: 24px;
+    }
     article {
         padding: var(--spacing-xl) var(--spacing-lg);
     }
@@ -1837,9 +1837,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    body {
-        padding-top: 200px;
-    }
 
     h1 {
         font-size: 24px;
@@ -1869,7 +1866,7 @@ body {
     }
     
     article {
-        padding: var(--spacing-lg) var(--spacing-md);
+        /* padding: var(--spacing-lg) var(--spacing-md); */
     }
 
     .hero-blog {
