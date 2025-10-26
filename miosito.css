@@ -377,8 +377,8 @@ nav ul.menu-principale li a:hover,
 /* Posiziona la X in alto a destra quando il menu è attivo */
 .mobile-menu-toggle.active {
     position: fixed;
-    top: 10px;
-    right: 150px;
+    top: 12px;    /* Diminuisci questo valore per spostare la X più in alto */
+    right: 200px;  /* Aumenta questo valore per spostare la X più a sinistra */
     left: auto;
     padding: 12px;
 }
@@ -537,7 +537,7 @@ main,
 .container-main {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: var(--spacing-2xl) var(--spacing-md);  /* RIDOTTO: da 24px a 16px laterale per meno spazio */
     background-color: transparent;
 }
 
@@ -1667,7 +1667,7 @@ a:focus-visible {
 @media (max-width: 768px) {
     #header-principale,
     header {
-        padding: 12px 16px;
+        padding: 12px 8px;  /* Ridotto per meno spazio laterale */
     }
     
     .container-header {
@@ -1784,7 +1784,7 @@ a:focus-visible {
         right: 24px;
     }
     article {
-        padding: var(--spacing-xl) var(--spacing-lg);
+        padding: var(--spacing-xl) var(--spacing-md);  /* Ridotto da 24px a 16px laterale */
     }
     
     .layout-grid {
@@ -1829,7 +1829,7 @@ a:focus-visible {
     main,
     #main-content,
     .container-main {
-        padding: var(--spacing-lg) var(--spacing-md);
+        padding: var(--spacing-lg) 4px;  /* RIDOTTO ANCORA: 4px per massimizzare spazio mobile */  /* Ridotto da 16px a 8px laterale */
     }
     
     .comment-replies {
